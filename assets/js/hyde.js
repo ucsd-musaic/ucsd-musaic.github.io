@@ -9,7 +9,7 @@ $(function() {
   });
 
   // Dynamic navbar background(except main)
-  $(window).scroll(function() {
+  $(window).scroll(function() {u
     if ($(".hyde.navbar-parent").hasClass("main")) return;
     if ($(this).scrollTop() > 10) {
       $(".hyde.navbar-parent").addClass("navbar-bg");
