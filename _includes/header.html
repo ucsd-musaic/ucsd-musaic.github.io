@@ -1,7 +1,5 @@
 <div class="hyde jumbotron">
   <div class="hyde container">
-    <br>
-    <br>
     <h1>{% if page.layout == "tag" %}<span class="hyde symbol">#</span>{% endif %}{{ page.title }}</h1>
     {% if page.layout == "post" %} {% assign author = site.data.authors | where: 'name', page.author | first %} {% include tags.html %}
     <div class="hyde post-desc">
