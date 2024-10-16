@@ -1,10 +1,10 @@
-title: Hyde
+title: UCSD-MUSAIC
 description: >-
   Hello!
-url: "https://chemistryx.github.io"
-baseurl: "/hyde"
-github: ChemistryX
-email: changeme@chemistryx.me
+url: "https://ucsd-musaic.github.io"
+baseurl: ""
+github: ucsd-musaic
+email: ucsd.musaic@gmail.com
 google_analytics: "UA_TOKEN"
 
 exclude: [README.md, Gemfile, Gemfile.lock]
