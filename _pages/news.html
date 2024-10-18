@@ -1,11 +1,128 @@
 ---
 title: News
-description: Current news
+description: 
 permalink: news
 visible: true
 order: 4
 ---
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* All styles are scoped to .news-section to prevent affecting other elements */
+    .news-section {
+      --font-primary: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+                      Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: #f9fafb;
+      font-family: var(--font-primary);
+      padding: 2rem 0;
+    }
 
-<div class="hyde posts">
-  {% for post in site.posts %} {% include post.html %} {% else %} {% include empty.html %} {% endfor %}
-</div>
+    .news-section .news-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .news-section .news-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .news-section .news-item {
+      display: flex;
+      align-items: baseline;
+      padding: 1rem 0;
+      border-bottom: 1px solid #e5e7eb;
+      transition: all 0.2s ease;
+    }
+
+    .news-section .news-item:last-child {
+      border-bottom: none;
+    }
+
+    .news-section .news-item:hover {
+      background-color: rgba(255, 255, 255, 0.7);
+      transform: translateX(5px);
+      padding-left: 10px;
+    }
+
+    .news-section .news-date {
+      min-width: 130px;
+      margin-right: 1.5rem;
+      font-weight: 500;
+      color: #4b5563;
+      font-size: 0.95rem;
+    }
+
+    .news-section .news-content {
+      color: #1f2937;
+      font-size: 1rem;
+      line-height: 1.5;
+      flex: 1;
+    }
+
+    .news-section .news-item.new {
+      animation: highlightNew 2s ease-out;
+    }
+
+    @keyframes highlightNew {
+      0% { background-color: #e5edff; }
+      100% { background-color: transparent; }
+    }
+
+    /* Dark mode support */
+    @media (prefers-color-scheme: dark) {
+      .news-section {
+        background-color: #1a1a1a;
+      }
+
+      .news-section .news-item {
+        border-bottom-color: #333;
+      }
+
+      .news-section .news-date {
+        color: #9ca3af;
+      }
+
+      .news-section .news-content {
+        color: #e5e7eb;
+      }
+
+      .news-section .news-item:hover {
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+    }
+
+    /* Responsive design */
+    @media (max-width: 640px) {
+      .news-section .news-item {
+        flex-direction: column;
+        padding: 1rem 0;
+      }
+
+      .news-section .news-date {
+        margin-bottom: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Added news-section class as a wrapper -->
+  <div class="news-section">
+    <div class="news-container">
+      <ul class="news-list">
+        <li class="news-item new">
+          <span class="news-date">May 22, 2024</span>
+          <span class="news-content">Ke defends dissertation.</span>
+        </li>
+        <li class="news-item new">
+          <span class="news-date">May 15, 2024</span>
+          <span class="news-content">Hao-Wen defends dissertation.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
