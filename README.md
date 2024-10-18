@@ -6,3 +6,4 @@
 - Tokens setup
 - Mobile View
 - Work on Research Page
+- Work on Favicon
