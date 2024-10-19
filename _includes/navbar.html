@@ -6,7 +6,7 @@
       <div class="hyde container">
         <ul class="hyde mobile-nav">
           <div class="hyde mobile-nav-row">
-            <a class="hyde mobile-nav-item logo" href="{{ site.baseurl }}"><i class="fas fa-meteor"></i> {{ site.title }}</a>
+            <a class="hyde mobile-nav-item logo" href="{{ site.url }}"><i class="fas fa-meteor"></i> {{ site.title }}</a>
             <a class="hyde mobile-nav-item close-btn"><i class="fas fa-times"></i></a>
           </div>
           {% for p in pages %} {% if p.visible == true %} {% assign url = page.url | split: '/' %}
@@ -18,7 +18,7 @@
     <div class="hyde container">
       <ul class="hyde navbar">
         <li class="hyde nav-item">
-          <a class="hyde nav-logo" href="{{ site.baseurl }}">
+          <a class="hyde nav-logo" href="{{ site.url }}">
             <img src="logo_draft.PNG" height="110" width="110" style="vertical-align: middle; margin-right: -10px; margin-bottom:-8.5px">UCSD-MUSAIC
           </a>
         </li>
