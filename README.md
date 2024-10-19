@@ -1,6 +1,6 @@
 # TO-DO
 - Debugging Header
-- Deugging index page
+- ~~Deugging index page~~
 - Checking the order of publications
 - URL to pubs
 - Tokens setup
