@@ -1,83 +1,88 @@
-- name: Julian McAuley
-  title: Professor
-  description: Julian McAuley is a Professor at UC San Diego, where he works on applications of machine learning to problems involving personalization, and teaches classes on personalized recommendation. He likes bicycling and baroque keyboard.
-  image: demo.png
-  website: https://cseweb.ucsd.edu/~jmcauley/
+PIs:
+  - name: Julian McAuley
+    title: Professor
+    description: Julian McAuley is a Professor at UC San Diego, where he works on applications of machine learning to problems involving personalization, and teaches classes on personalized recommendation. He likes bicycling and baroque keyboard.
+    image: julian_mcauley.jpg
+    website: https://cseweb.ucsd.edu/~jmcauley/
 
-- name: Jingwei Liu
-  title: PhD Student
-  description: My name is Jingwei Liu, a 5th year Ph.D. candidate in Computer Music at UCSD. My work focuses on AI music generation, deep active inference, and neural machines.
-  image: demo.png
-  website: https://yuer867.github.io/
+PHDs:
+  - name: Jingwei Liu
+    title: PhD Student
+    description: My name is Jingwei Liu, a 5th year Ph.D. candidate in Computer Music at UCSD. My work focuses on AI music generation, deep active inference, and neural machines.
+    image: jingwei_liu.PNG
+    website: https://scholar.google.com/citations?user=St7jCKUAAAAJ&hl=en&oi=ao
 
-- name: Xin Xu
-  title: PhD Student
-  description: Hi, I'm Xin Xu, a CSE Ph.D. student at UCSD, advised by Prof. Julian McAuley. My interests include NLP and Musician-oriented AI Assistant. I love to interpret music pieces and play the piano. Art is my life.
-  image: demo.png
-  website: https://xxupiano.github.io/
+  - name: Xin Xu
+    title: PhD Student
+    description: Hi, I'm Xin Xu, a CSE Ph.D. student at UCSD, advised by Prof. Julian McAuley. My interests include NLP and Musician-oriented AI Assistant. I love to interpret music pieces and play the piano. Art is my life.
+    image: xin_xu.jpeg
+    website: https://xxupiano.github.io/
 
-- name: Junda Wu
-  title: PhD Student
-  description: I am a second-year PhD student advised by Prof. Julian McAuley. My research spans NLP, multimodality, and music recommendation. I love classical music and opera, and I have a growing collection of CDs and vinyl.
-  image: demo.png
-  website: https://www.linkedin.com/in/junda-wu-97503a1b3/
+  - name: Junda Wu
+    title: PhD Student
+    description: I am a second-year PhD student advised by Prof. Julian McAuley. My research spans NLP, multimodality, and music recommendation. I love classical music and opera, and I have a growing collection of CDs and vinyl.
+    image: junda_wu.jpeg
+    website: https://www.linkedin.com/in/junda-wu-97503a1b3/
 
-- name: Tornike Karchkhadze
-  title: PhD Student
-  description: With over 15 years of experience in music, audio, and data science, I am an audio machine learning researcher and a computer music Ph.D. candidate at UC San Diego. My research includes music & sound synthesis using deep learning.
-  image: demo.png
-  website: https://www.linkedin.com/in/tornike-karchkhadze/
+  - name: Tornike Karchkhadze
+    title: PhD Student
+    description: With over 15 years of experience in music, audio, and data science, I am an audio machine learning researcher and a computer music Ph.D. candidate at UC San Diego. My research includes music & sound synthesis using deep learning.
+    image: Tornike_Karchkhadze.png
+    website: https://www.linkedin.com/in/tornike-karchkhadze/
 
-- name: Haven Kim
-  title: PhD Student
-  description: I'm a first-year PhD student working with Professor Julian McAuley, exploring the intersection of music and ML. When I'm not working, I enjoy playing video games and hanging out with friends.
-  image: demo.png
-  website: https://havenpersona.github.io/
+  - name: Haven Kim
+    title: PhD Student
+    description: I'm a first-year PhD student working with Professor Julian McAuley, exploring the intersection of music and ML. When I'm not working, I enjoy playing video games and hanging out with friends.
+    image: haven_kim.png
+    website: https://havenpersona.github.io/
 
-- name: Eduardo Escoto
-  title: PhD Student
-  description: I'm Ed! I'm a first-year PhD student advised by Julian McAuley, focusing on Recommender Systems and Generative Music. In my free time, I enjoy surfing, playing JRPGs, and learning music production.
-  image: demo.png
-  website: https://eduardo-escoto.com
+  - name: Eduardo Escoto
+    title: PhD Student
+    description: I'm Ed! I'm a first-year PhD student advised by Julian McAuley, focusing on Recommender Systems and Generative Music. In my free time, I enjoy surfing, playing JRPGs, and learning music production.
+    image: eduardo_escoto.png
+    website: https://eduardo-escoto.com
 
-- name: Jingyue Huang
-  title: PhD Student
-  description: I am a first-year PhD student in Computer Science at UC San Diego, advised by Prof. Julian McAuley. My research focuses on Controllable Music Generation and Music Understanding. I love playing guitar and traveling to explore beautiful nature spots.
-  image: demo.png
-  website: https://yuer867.github.io/
+  - name: Jingyue Huang
+    title: PhD Student
+    description: I am a first-year PhD student in Computer Science at UC San Diego, advised by Prof. Julian McAuley. My research focuses on Controllable Music Generation and Music Understanding. I love playing guitar and traveling to explore beautiful nature spots.
+    image: jingyue_huang.jpeg
+    website: https://yuer867.github.io/
 
-- name: Hao-Wen Dong
-  title: Assistant Professor
-  description: I am currently an assistant professor at the University of Michigan, working on human-centered generative AI for music, audio, and video creation.
-  image: demo.png
-  website: https://hermandong.com/
+Alumni:
+  - name: Hao-Wen Dong
+    title: Assistant Professor
+    description: I am currently an assistant professor at the University of Michigan, working on human-centered generative AI for music, audio, and video creation.
+    image: haowen_dong.jpg
+    website: https://hermandong.com/
 
-- name: Phillip Long
-  title: Undergraduate Researcher
-  description: Hi! My name is Phillip Long. I’m a second-year undergraduate student in the McAuley Lab mentored by Zachary Novack. I am interested in symbolic music generation and data-centric approaches to music processing. In my free time, I play the trumpet and piano, which sparked my interest in AI-Music.
-  image: demo.png
-  website: https://pnlong.github.io/portfolio/
+  - name: Ross Greer
+    title: Assistant Professor
+    description: I'm an Assistant Professor in Computer Science & Engineering at UC Merced, with research interests in multimodal machine learning and human-robot interaction to improve machines' understanding of human intentions. Outside of research, I enjoy leading orchestra rehearsals and writing music.
+    image: ross_greer.jpg
+    website: https://www.rossgreer.com
 
-- name: Amit Namburi
-  title: Undergraduate Researcher
-  description: I am Amit Namburi, an undergraduate researcher working under the guidance of Professor Julian McAuley. My research centers on Recommender Systems, LLMs, and Music Information Retrieval. In my free time, I stay active by playing sports and going on long scenic drives.
-  image: demo.png
-  website: https://namburiamit.com/
+Undergraduates:
+  - name: Phillip Long
+    title: Undergraduate Researcher
+    description: Hi! My name is Phillip Long. I’m a second-year undergraduate student in the McAuley Lab mentored by Zachary Novack. I am interested in symbolic music generation and data-centric approaches to music processing. In my free time, I play the trumpet and piano, which sparked my interest in AI-Music.
+    image: phillip_long.jpg
+    website: https://pnlong.github.io/portfolio/
 
-- name: Ross Greer
-  title: Assistant Professor
-  description: I'm an Assistant Professor in Computer Science & Engineering at UC Merced, with research interests in multimodal machine learning and human-robot interaction to improve machines' understanding of human intentions. Outside of research, I enjoy leading orchestra rehearsals and writing music.
-  image: demo.png
-  website: https://www.rossgreer.com
+  - name: Amit Namburi
+    title: Undergraduate Researcher
+    description: I am Amit Namburi, an undergraduate researcher working under the guidance of Professor Julian McAuley. My research centers on Recommender Systems, LLMs, and Music Information Retrieval. In my free time, I stay active by playing sports and going on long scenic drives.
+    image: amit_namburi.jpg
+    website: https://namburiamit.com/
 
-- name: Matthew Rice
-  title: Research Engineer
-  description: Hey, I'm Matthew. I'm a graduate of UCSD and currently work at Output as a research engineer, designing tools for music producers. In my spare time, I enjoy playing piano and sports.
-  image: demo.png
-  website: https://www.matthew-rice.com/
+Affiliates:
+  - name: Matthew Rice
+    title: Research Engineer
+    description: Hey, I'm Matthew. I'm a graduate of UCSD and currently work at Output as a research engineer, designing tools for music producers. In my spare time, I enjoy playing piano and sports.
+    image: matthew_rice.jpg
+    website: https://www.matthew-rice.com/
 
-- name: Milan Gupta
-  title: High School Junior
-  description: Hello! I’m Milan Gupta, a Junior at Francis Parker High School with a passion for generative AI and its applications in music and signal processing. In my free time, I enjoy producing EDM music and playing lacrosse.
-  image: demo.png
-  website: https://www.linkedin.com/in/milan-gupta-a131902b3/
+  - name: Milan Gupta
+    title: High School Junior
+    description: Hello! I’m Milan Gupta, a Junior at Francis Parker High School with a passion for generative AI and its applications in music and signal processing. In my free time, I enjoy producing EDM music and playing lacrosse.
+    image: milan_gupta.png
+    website: https://www.linkedin.com/in/milan-gupta-a131902b3/
