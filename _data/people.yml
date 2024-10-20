@@ -7,16 +7,16 @@ PIs:
 
 PHDs:
   - name: Jingwei Liu
-    title: PhD Student
+    title: PhD Candidate
     description: My name is Jingwei Liu, a 5th year Ph.D. candidate in Computer Music at UCSD. My work focuses on AI music generation, deep active inference, and neural machines.
     image: jingwei_liu.PNG
     website: https://scholar.google.com/citations?user=St7jCKUAAAAJ&hl=en&oi=ao
 
-  - name: Xin Xu
-    title: PhD Student
-    description: Hi, I'm Xin Xu, a CSE Ph.D. student at UCSD, advised by Prof. Julian McAuley. My interests include NLP and Musician-oriented AI Assistant. I love to interpret music pieces and play the piano. Art is my life.
-    image: xin_xu.jpeg
-    website: https://xxupiano.github.io/
+  - name: Tornike Karchkhadze
+    title: PhD Candidate
+    description: With over 15 years of experience in music, audio, and data science, I am an audio machine learning researcher and a computer music Ph.D. candidate at UC San Diego. My research includes music & sound synthesis using deep learning.
+    image: Tornike_Karchkhadze.png
+    website: https://www.linkedin.com/in/tornike-karchkhadze/
 
   - name: Junda Wu
     title: PhD Student
@@ -24,17 +24,11 @@ PHDs:
     image: junda_wu.jpeg
     website: https://www.linkedin.com/in/junda-wu-97503a1b3/
 
-  - name: Tornike Karchkhadze
+  - name: Xin Xu
     title: PhD Student
-    description: With over 15 years of experience in music, audio, and data science, I am an audio machine learning researcher and a computer music Ph.D. candidate at UC San Diego. My research includes music & sound synthesis using deep learning.
-    image: Tornike_Karchkhadze.png
-    website: https://www.linkedin.com/in/tornike-karchkhadze/
-
-  - name: Haven Kim
-    title: PhD Student
-    description: I'm a first-year PhD student working with Professor Julian McAuley, exploring the intersection of music and ML. When I'm not working, I enjoy playing video games and hanging out with friends.
-    image: haven_kim.png
-    website: https://havenpersona.github.io/
+    description: Hi, I'm Xin Xu, a CSE Ph.D. student at UCSD, advised by Prof. Julian McAuley. My interests include NLP and Musician-oriented AI Assistant. I love to interpret music pieces and play the piano. Art is my life.
+    image: xin_xu.jpeg
+    website: https://xxupiano.github.io/
 
   - name: Eduardo Escoto
     title: PhD Student
@@ -48,6 +42,12 @@ PHDs:
     image: jingyue_huang.jpeg
     website: https://yuer867.github.io/
 
+  - name: Haven Kim
+    title: PhD Student
+    description: I'm a first-year PhD student working with Professor Julian McAuley, exploring the intersection of music and ML. When I'm not working, I enjoy playing video games and hanging out with friends.
+    image: haven_kim.png
+    website: https://havenpersona.github.io/
+    
 Alumni:
   - name: Hao-Wen Dong
     title: Assistant Professor
@@ -62,17 +62,18 @@ Alumni:
     website: https://www.rossgreer.com
 
 Undergraduates:
+  - name: Amit Namburi
+    title: Undergraduate Researcher
+    description: I am Amit Namburi, an undergraduate researcher working under the guidance of Professor Julian McAuley. My research centers on Recommender Systems, LLMs, and Music Information Retrieval. In my free time, I stay active by playing sports and going on long scenic drives.
+    image: amit_namburi.jpg
+    website: https://namburiamit.com/
+
   - name: Phillip Long
     title: Undergraduate Researcher
     description: Hi! My name is Phillip Long. I’m a second-year undergraduate student in the McAuley Lab mentored by Zachary Novack. I am interested in symbolic music generation and data-centric approaches to music processing. In my free time, I play the trumpet and piano, which sparked my interest in AI-Music.
     image: phillip_long.jpg
     website: https://pnlong.github.io/portfolio/
 
-  - name: Amit Namburi
-    title: Undergraduate Researcher
-    description: I am Amit Namburi, an undergraduate researcher working under the guidance of Professor Julian McAuley. My research centers on Recommender Systems, LLMs, and Music Information Retrieval. In my free time, I stay active by playing sports and going on long scenic drives.
-    image: amit_namburi.jpg
-    website: https://namburiamit.com/
 
 Affiliates:
   - name: Matthew Rice
