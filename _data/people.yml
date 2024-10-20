@@ -5,7 +5,7 @@ PIs:
     image: julian_mcauley.jpg
     website: https://cseweb.ucsd.edu/~jmcauley/
 
-PHDs:
+PhDs:
   - name: Jingwei Liu
     title: PhD Candidate
     description: My name is Jingwei Liu, a 5th year Ph.D. candidate in Computer Music at UCSD. My work focuses on AI music generation, deep active inference, and neural machines.
@@ -47,7 +47,7 @@ PHDs:
     description: I'm a first-year PhD student working with Professor Julian McAuley, exploring the intersection of music and ML. When I'm not working, I enjoy playing video games and hanging out with friends.
     image: haven_kim.png
     website: https://havenpersona.github.io/
-    
+
 Alumni:
   - name: Hao-Wen Dong
     title: Assistant Professor

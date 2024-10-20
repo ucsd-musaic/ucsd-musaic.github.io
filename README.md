@@ -1,5 +1,5 @@
 # TO-DO
-- Debugging Header
+- ~~Debugging Header~~
 - ~~Deugging index page~~
 - Checking the order of publications
 - URL to pubs
