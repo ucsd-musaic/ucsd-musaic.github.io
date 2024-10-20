@@ -1,3 +1,5 @@
+
+<body>
 <header class="hyde header {% if page.url == "/" %}main{% endif %}">
   <nav class="hyde navbar-parent {% if page.url == "/" %}main{% endif %}">
     {% assign pages = site.pages | sort:'order' %}
@@ -6,7 +8,7 @@
       <div class="hyde container">
         <ul class="hyde mobile-nav">
           <div class="hyde mobile-nav-row">
-            <a class="hyde mobile-nav-item logo" href="{{ site.url }}"><i class="fas fa-meteor"></i> {{ site.title }}</a>
+            <i class="fas fa-meteor"></i> {{ site.title }}</a>
             <a class="hyde mobile-nav-item close-btn"><i class="fas fa-times"></i></a>
           </div>
           {% for p in pages %} {% if p.visible == true %} {% assign url = page.url | split: '/' %}
@@ -36,3 +38,4 @@
     </div>
   </nav>
 </header>
+</body>

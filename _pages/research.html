@@ -1,34 +1,582 @@
 ---
 title: Research
-description: Research Direction
+description:
 permalink: research
 visible: true
 order: 3
 ---
 
-<div class="hyde posts">
-  {% assign sorted = site.projects | sort: 'date' | reverse %} {% for project in sorted %}
-  <div class="hyde post{% unless forloop.last %} divider{% endunless %}">
-    <a href="{{ site.baseurl }}{{ project.url }}">
-      <div class="hyde post-thumbnail-wrapper">
-        {% if project.image %}
-        <div class="hyde post-thumbnail" style="background-image: url('{{ site.baseurl }}/assets/images/projects/{{ project.image }}');"></div>
-        {% elsif project.youtube %}
-        <div
-          class="hyde post-thumbnail"
-          style="background-image: url('{{ project.youtube | prepend: 'https://img.youtube.com/vi/' }}/maxresdefault.jpg')"
-        ></div>
-        {% else %}
-        <div class="hyde post-thumbnail"></div>
-        {% endif %}
-      </div>
-    </a>
-    <a href="{{ site.baseurl }}{{ project.url }}">
-      <h2 class="hyde post-title">{{ project.title }}</h2>
-    </a>
-    <div class="hyde post-trail">
-      <span class="hyde post-date">{{ project.date | date: '%Y년 %-m월 %-d일' }}</span>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Previous head content remains the same -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .intro {
+    max-width: 800px;
+    padding: 3rem;
+    margin: 1rem;
+    border-radius: 12px;
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      
+  }
+
+  .intro::before,
+  .intro::after {
+    content: '"';
+    position: absolute;
+    font-size: 4rem;
+    font-family: Georgia, serif;
+    color: #4299e1;
+    opacity: 0.3;
+    line-height: 1;
+  }
+
+  .intro::before {
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .intro::after {
+    bottom: 0;
+    right: 1rem;
+    transform: rotate(180deg);
+  }
+
+  .intro p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #2c3e50;
+    margin: 0;
+    text-align: center;
+  }
+
+  .highlight {
+    display: inline-block;
+    position: relative;
+    font-weight: 600;
+    color: #1a365d;
+  }
+
+  .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #4299e1, #667eea);
+    transform: scaleX(0.8);
+    transition: transform 0.3s ease;
+  }
+
+  .highlight:hover::after {
+    transform: scaleX(1);
+  }
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0.5rem;
+        }
+
+        .preview-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,24,64,0.1),
+                       0 0 2px rgba(0,24,64,0.2);
+        }
+
+        .preview-card:hover {
+            box-shadow: 0 4px 8px rgba(0,24,64,0.15),
+                       0 0 2px rgba(0,24,64,0.2);
+            transform: translateY(-1px);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2d3748;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            
+        }
+
+        .researcher-previews {
+            display: flex;
+            margin-left: 1rem;
+            /* Added to ensure proper stacking context */
+            position: relative;
+        }
+
+
+        .researcher-preview {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 2px solid white;
+            margin-left: -1rem;
+            object-fit: cover;
+        }
+
+
+
+        .researcher-preview:nth-child(3) {
+            margin-left: -1rem;
+            z-index: 1;
+        }
+
+        .researcher-preview:nth-child(2) {
+            margin-left: -1rem;
+            z-index: 2;
+        }
+
+        .researcher-preview:nth-child(1) {
+            margin-left: 0;  /* First image doesn't need negative margin */
+            z-index: 3;
+        }
+
+        /* Rest of the styles remain the same */
+        .detailed-view {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .researchers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .researcher-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .researcher-image {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .researcher-name {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 0.5rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            
+        }
+
+        .researcher-card:hover .researcher-name {
+            opacity: 1;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin: 1.5rem 0 1rem;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            
+        }
+
+        .description {
+            margin: 1rem 0;
+            color: #4a5568;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            
+        }
+
+        .publications-list {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .publication-item {
+            border-left: 4px solid #4299e1;
+            padding: 0.75rem 1rem;
+            margin-bottom: 0.75rem;
+            background: #f8f9fa;
+            transition: background-color 0.3s ease;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            
+        }
+
+        .publication-item:hover {
+            background: #edf2f7;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            background: #4299e1;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            margin-top: 1.5rem;
+            transition: background-color 0.3s ease;
+            font-size: 0.875rem;
+            font-weight: 500;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            
+            gap: 0.5rem;
+        }
+
+        .back-button:hover {
+            background: #3182ce;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+  <body>
+    
+    <div class="intro">
+      <p>Here at MUSAIC, we are primarily interested in investigating how we can build better systems for music <span class="highlight">generation</span> and <span class="highlight">understanding</span>.</p>
     </div>
+
+    <div class="container">
+         <!-- Preview Card 1 -->
+      <div class="preview-card" id="preview-card-1">
+        <div class="card-header">
+            <h2 class="title">Music Audio Generation and Synthesis</h2>
+            <div class="researcher-previews">
+                <img src="/assets/images/people/zachary_novack.jpeg" alt="Researcher 1" class="researcher-preview">
+                <img src="/assets/images/people/Tornike_Karchkhadze.png" alt="Researcher 2" class="researcher-preview">
+                <img src="/assets/images/people/ke_chen.jpeg" alt="Researcher 3" class="researcher-preview">
+                <img src="/assets/images/people/haowen_dong.jpg" alt="Researcher 4" class="researcher-preview">
+            
+            </div>
+        </div>
+    </div>
+
+    <!-- Detailed View 1 -->
+    <div class="detailed-view hidden" id="detailed-view-1">
+        <h1 class="title">Music Audio Generation and Synthesis</h1>
+        <h2 class="section-title">People Involved</h2>
+            
+        <div class="researchers-grid">
+            <div class="researcher-card">
+                <img src="/assets/images/people/zachary_novack.jpeg" alt="Researcher 1" class="researcher-image">
+                <div class="researcher-name">Zachary Novack</div>
+            </div>
+            <div class="researcher-card">
+              <img src="/assets/images/people/Tornike_Karchkhadze.png" alt="Researcher 2" class="researcher-image">
+              <div class="researcher-name">Tornike Karchkhadze</div>
+          </div>
+            <div class="researcher-card">
+                <img src="/assets/images/people/ke_chen.jpeg" alt="Researcher 3" class="researcher-image">
+                <div class="researcher-name">Ke Chen</div>
+            </div>
+            <div class="researcher-card">
+              <img src="/assets/images/people/haowen_dong.jpg" alt="Researcher 4" class="researcher-image">
+              <div class="researcher-name">Hao-Wen (Herman) Dong</div>
+            </div>
+          </div>
+            
+
+        
+          <p class="description">
+            Our research has investigated the field of audio generation and synthesis through innovative machine learning approaches. We have explored various methodologies for generating high-quality audio content, ranging from pioneering work with Generative Adversarial Networks (GANs) for raw-waveform audio synthesis to developing sophisticated music generation systems.
+         </p>
+        <h2 class="section-title">Featured Publications</h2>
+        <ul class="publications-list">
+            <li class="publication-item">
+              Zachary Novack, Ge Zhu, Jonah Casebeer, Julian McAuley, Taylor Berg-Kirkpatrick, Nicholas J Bryan. 2024. "Presto! Distilling Steps and Layers for Accelerating Music Generation" arXiv:2410.05167
+            </li>
+            <li class="publication-item">
+              Tornike Karchkhadze, Mohammad Rasool Izadi, Ke Chen, Gerard Assayag, Shlomo Dubnov. 2024. "Multi-Track MusicLDM: Towards Versatile Music Generation with Latent Diffusion Model" arXiv:2409.02845
+            </li>
+            <li class="publication-item">
+              Zachary Novack, Julian McAuley, Taylor Berg-Kirkpatrick, Nicholas Bryan. 2024. "DITTO-2: Distilled Diffusion Inference-Time T-Optimization for Music Generation" nternational Society for Music Information Retrieval (ISMIR)
+            </li>
+            <li class="publication-item">
+              Ke Chen, Yusong Wu, Haohe Liu, Marianna Nezhurina, Taylor Berg-Kirkpatrick, Shlomo Dubnov. 2024. "MusicLDM: Enhancing novelty in text-to-music generation using beat-synchronous mixup strategies" International Conference on Acoustics, Speech and Signal Processing (ICASSP) 
+            </li>
+            <li class="publication-item">
+              Zachary Novack, Julian McAuley, Taylor Berg-Kirkpatrick, Nicholas J Bryan. 2024. "Ditto: Diffusion inference-time t-optimization for music generation" International Conference on Machine Learning (ICML)
+            </li>
+            <li class="publication-item">
+              Chris Donahue, Julian McAuley, and Miller Puckette. 2019. "Adversarial Audio Synthesis" International Conference on Learning Representations (ICLR)
+           </li>
+        </ul>
+
+        <button class="back-button" id="back-button-1">Show Less ↑</button>
+
   </div>
-  {% else %} {% include empty.html %} {% endfor %}
+        <!-- Preview Card 2 -->
+        <div class="preview-card" id="preview-card-2">
+          <div class="card-header">
+              <h2 class="title">Symbolic Music Processing</h2>
+              <div class="researcher-previews">
+                  <img src="/assets/images/people/jingyue_huang.jpeg" alt="Researcher 1" class="researcher-preview">
+                  <img src="/assets/images/people/phillip_long.jpg" alt="Researcher 1" class="researcher-preview">
+                  
+                  <img src="/assets/images/people/haowen_dong.jpg" alt="Researcher 2" class="researcher-preview">
+                  <img src="/assets/images/people/ke_chen.jpeg" alt="Researcher 3" class="researcher-preview">
+             
+              </div>
+          </div>
+      </div>
+  
+
+
+      <div class="detailed-view hidden" id="detailed-view-2">
+        <h1 class="title">Symbolic Music Processing</h1>
+        <h2 class="section-title">People Involved</h2>
+        <div class="researchers-grid">
+            <div class="researcher-card">
+                <img src="/assets/images/people/jingyue_huang.jpeg" alt="Researcher 1" class="researcher-image">
+                <div class="researcher-name">Jingyue Huang</div>
+            </div>
+            <div class="researcher-card">
+                <img src="/assets/images/people/phillip_long.jpg" alt="Researcher 2" class="researcher-image">
+                <div class="researcher-name">Phillip Long</div>
+            </div>
+            <div class="researcher-card">
+              <img src="/assets/images/people/haowen_dong.jpg" alt="Researcher 3" class="researcher-image">
+              <div class="researcher-name">Hao-Wen (Herman) Dong</div>
+          </div>
+          <div class="researcher-card">
+            <img src="/assets/images/people/ke_chen.jpeg" alt="Researcher 4" class="researcher-image">
+            <div class="researcher-name">Ke Chen</div>
+        </div>
+        </div>
+
+        <p class="description">
+          We have explored various applications of machine learning for symbolic music processing. These include automatic composition and arrangement, as well as the construction of symbolic music datasets.</p>
+
+        <h2 class="section-title">Featured Publications</h2>
+        <ul class="publications-list">
+          <li class="publication-item">
+            Phillip Long, Zachary Novack, Taylor Berg-Kirkpatrick, Julian McAuley. 2024. "PDMX: A Large-Scale Public Domain MusicXML Dataset for Symbolic Music Processing" arXiv:2409.10831
+          </li>
+          <li class="publication-item">
+            Jingyue Huang, Ke Chen, Yi-Hsuan Yang. 2024. "Emotion-driven Piano Music Generation via Two-stage Disentanglement and Functional Representation" International Society for Music Information Retrieval (ISMIR)
+          </li>
+          <li class="publication-item">
+            Hao-Wen Dong, Ke Chen, Shlomo Dubnov, Julian McAuley, Taylor Berg-Kirkpatrick. 2023. "Multitrack music transformer" International Conference on Acoustics, Speech and Signal Processing (ICASSP)
+          </li>
+          <li class="publication-item">
+            Hao-Wen Dong, Chris Donahue, Taylor Berg-Kirkpatrick, Julian McAuley. 2021. "Towards automatic instrumentation by learning to separate parts in symbolic multitrack music" International Society for Music Information Retrieval (ISMIR)
+          </li>
+      </ul>
+
+        <button class="back-button" id="back-button-2">Show Less ↑</button>
+    </div>
+
+
+     
+      <!-- Preview Card 2 -->
+      <div class="preview-card" id="preview-card-3">
+          <div class="card-header">
+              <h2 class="title">Music and Language Processing</h2>
+              <div class="researcher-previews">
+
+              <img src="/assets/images/people/junda_wu.jpeg" alt="Researcher 1" class="researcher-preview">
+              <img src="/assets/images/people/xin_xu.jpeg" alt="Researcher 3" class="researcher-preview">
+              </div>
+          </div>
+      </div>
+      
+      <!-- Detailed View 2 -->
+
+
+              <!-- Detailed View 2 -->
+        <div class="detailed-view hidden" id="detailed-view-3">
+                <h1 class="title">Music and Language Processing</h1>
+                <h2 class="section-title">People Involved</h2>
+                <div class="researchers-grid">
+                    <div class="researcher-card">
+                        <img src="/assets/images/people/junda_wu.jpeg" alt="Researcher 1" class="researcher-image">
+                        <div class="researcher-name">Junda Wu</div>
+                    </div>
+                    <div class="researcher-card">
+                        <img src="/assets/images/people/xin_xu.jpeg" alt="Researcher 2" class="researcher-image">
+                        <div class="researcher-name">Xin Xu</div>
+                    </div>
+              
+                  </div>
+        
+                <p class="description">
+                  Others among us are focused on natural language processing techniques for deeper musical understanding. These include audio-language representation learning, music captioning, and lyric generation.</p>
+        
+                <h2 class="section-title">Featured Publications</h2>
+                <ul class="publications-list">
+                  <li class="publication-item">
+                    Nikita Srivatsan, Ke Chen, Shlomo Dubnov, Taylor Berg-Kirkpatrick. 2024. "Retrieval guided music captioning via multimodal prefixes" IJCAI 2024 (Special Track on AI, the Arts, and Creativity)
+                  </li>
+                  <li class="publication-item">
+                      Junda Wu, Warren Li, Zachary Novack, Amit Namburi, Carol Chen, Julian McAuley. 2024. "CoLLAP: Contrastive Long-form Language-Audio Pretraining with Musical Temporal Structure Augmentation" arXiv:2410.02271
+                  </li>
+                  <li class="publication-item">
+                      Junda Wu, Zachary Novack, Amit Namburi, Jiaheng Dai, Hao-Wen Dong, Zhouhang Xie, Carol Chen, Julian McAuley. 2024. "Futga: Towards Fine-grained Music Understanding through Temporally-enhanced Generative Augmentation" arXiv:2407.20445  
+                  </li>
+
+                </ul>
+        
+                <button class="back-button" id="back-button-3">Show Less ↑</button>
+            </div>
+
+            
+  
+        
+
+
+  <div class="preview-card" id="preview-card-4">
+    <div class="card-header">
+        <h2 class="title">Audiovisual Learning</h2>
+        <div class="researcher-previews">
+          <img src="/assets/images/people/haven_kim.png" alt="Researcher 1" class="researcher-preview">
+          <img src="/assets/images/people/ross_greer.jpg" alt="Researcher 2" class="researcher-preview">
+          
+        </div>
+    </div>
 </div>
+  <div class="detailed-view hidden" id="detailed-view-4">
+    <h1 class="title">Audiovisual Learning</h1>
+    <h2 class="section-title">People Involved</h2>
+    <div class="researchers-grid">
+        <div class="researcher-card">
+            <img src="/assets/images/people/haven_kim.png" alt="Researcher 1" class="researcher-image">
+            <div class="researcher-name">Haven Kim</div>
+        </div>
+        <div class="researcher-card">
+            <img src="/assets/images/people/ross_greer.jpg" alt="Researcher 2" class="researcher-image">
+            <div class="researcher-name">Ross Greer</div>
+        </div>
+    </div>
+
+    <p class="description">
+      Some of us are interested in enhancing musical experiences through visual communication. Our related efforts include building a robotic camera for sharing scores and investigating soundtracks within the context of films, such as documentaries.</p>
+
+    <h2 class="section-title">Featured Publications</h2>
+    <ul class="publications-list">
+      <li class="publication-item">
+        Weihan Xu, Paul Pu Liang, Haven Kim, Julian McAuley, Taylor Berg-Kirkpatrick, Hao-Wen Dong. 2024. "TeaserGen: Generating Teasers for Long Documentaries" arXiv:2410.05586 
+      </li>
+        <li class="publication-item">
+          Ross Greer, Laura Fleig, Shlomo Dubnov. 2024. "Creativity and Visual Communication from Machine to Musician: Sharing a Score through a Robotic Camera" arXiv:2409.05773
+        </li>
+        <li class="publication-item">
+          Hao-Wen Dong, Naoya Takahashi, Yuki Mitsufuji, Julian McAuley, Taylor Berg-Kirkpatrick. 2023. "ClipSep: Learning text-queried sound separation with noisy unlabeled videos" International Conference on Learning Representations (ICLR) 
+        </li>
+
+
+    </ul>
+
+    <button class="back-button" id="back-button-4">Show Less ↑</button>
+</div>
+
+
+
+   <!-- Preview Card 2 -->
+   <div class="preview-card" id="preview-card-5">
+    <div class="card-header">
+        <h2 class="title">Others</h2>
+        <div class="researcher-previews">
+        </div>
+    </div>
+</div>
+
+<!-- Detailed View 2 -->
+<div class="detailed-view hidden" id="detailed-view-5">
+    <h1 class="title">Others</h1>
+  
+
+    <p class="description">
+      We have also actively explored other applications of machine learning for music, such as Optical Music Recognition, source separation, and melody extraction. See our publications page for details!
+    </p>
+    <button class="back-button" id="back-button-5">Show Less ↑</button>
+</div>
+
+
+    <script>
+      document.getElementById('preview-card-1').addEventListener('click', function() {
+          document.getElementById('preview-card-1').classList.add('hidden');
+          document.getElementById('detailed-view-1').classList.remove('hidden');
+      });
+  
+      document.getElementById('back-button-1').addEventListener('click', function() {
+          document.getElementById('detailed-view-1').classList.add('hidden');
+          document.getElementById('preview-card-1').classList.remove('hidden');
+      });
+  
+      document.getElementById('preview-card-2').addEventListener('click', function() {
+          document.getElementById('preview-card-2').classList.add('hidden');
+          document.getElementById('detailed-view-2').classList.remove('hidden');
+      });
+  
+      document.getElementById('back-button-2').addEventListener('click', function() {
+          document.getElementById('detailed-view-2').classList.add('hidden');
+          document.getElementById('preview-card-2').classList.remove('hidden');
+      });
+      document.getElementById('preview-card-3').addEventListener('click', function() {
+          document.getElementById('preview-card-3').classList.add('hidden');
+          document.getElementById('detailed-view-3').classList.remove('hidden');
+      });
+  
+      document.getElementById('back-button-3').addEventListener('click', function() {
+          document.getElementById('detailed-view-3').classList.add('hidden');
+          document.getElementById('preview-card-3').classList.remove('hidden');
+      });
+      document.getElementById('preview-card-4').addEventListener('click', function() {
+          document.getElementById('preview-card-4').classList.add('hidden');
+          document.getElementById('detailed-view-4').classList.remove('hidden');
+      });
+  
+      document.getElementById('back-button-4').addEventListener('click', function() {
+          document.getElementById('detailed-view-4').classList.add('hidden');
+          document.getElementById('preview-card-4').classList.remove('hidden');
+      });
+      document.getElementById('preview-card-5').addEventListener('click', function() {
+          document.getElementById('preview-card-5').classList.add('hidden');
+          document.getElementById('detailed-view-5').classList.remove('hidden');
+      });
+  
+      document.getElementById('back-button-5').addEventListener('click', function() {
+          document.getElementById('detailed-view-5').classList.add('hidden');
+          document.getElementById('preview-card-5').classList.remove('hidden');
+      });
+    </script>
+  </body>
+  
+</html>
