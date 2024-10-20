@@ -6,29 +6,304 @@ visible: true
 order: 3
 ---
 
-<div class="hyde posts">
-  {% assign sorted = site.projects | sort: 'date' | reverse %} {% for project in sorted %}
-  <div class="hyde post{% unless forloop.last %} divider{% endunless %}">
-    <a href="{{ site.baseurl }}{{ project.url }}">
-      <div class="hyde post-thumbnail-wrapper">
-        {% if project.image %}
-        <div class="hyde post-thumbnail" style="background-image: url('{{ site.baseurl }}/assets/images/projects/{{ project.image }}');"></div>
-        {% elsif project.youtube %}
-        <div
-          class="hyde post-thumbnail"
-          style="background-image: url('{{ project.youtube | prepend: 'https://img.youtube.com/vi/' }}/maxresdefault.jpg')"
-        ></div>
-        {% else %}
-        <div class="hyde post-thumbnail"></div>
-        {% endif %}
-      </div>
-    </a>
-    <a href="{{ site.baseurl }}{{ project.url }}">
-      <h2 class="hyde post-title">{{ project.title }}</h2>
-    </a>
-    <div class="hyde post-trail">
-      <span class="hyde post-date">{{ project.date | date: '%Y년 %-m월 %-d일' }}</span>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Previous head content remains the same -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Areas</title>
+    <style>
+        /* Previous styles remain the same */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0.5rem;
+        }
+
+        .preview-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,24,64,0.1),
+                       0 0 1px rgba(0,24,64,0.2);
+        }
+
+        .preview-card:hover {
+            box-shadow: 0 4px 8px rgba(0,24,64,0.15),
+                       0 0 2px rgba(0,24,64,0.2);
+            transform: translateY(-1px);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2d3748;
+        }
+
+        .researcher-previews {
+            display: flex;
+            margin-left: 1rem;
+            /* Added to ensure proper stacking context */
+            position: relative;
+        }
+
+
+        .researcher-preview {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 2px solid white;
+            margin-left: -1rem;
+            object-fit: cover;
+        }
+
+
+
+        .researcher-preview:nth-child(3) {
+            margin-left: -1rem;
+            z-index: 1;
+        }
+
+        .researcher-preview:nth-child(2) {
+            margin-left: -1rem;
+            z-index: 2;
+        }
+
+        .researcher-preview:nth-child(1) {
+            margin-left: 0;  /* First image doesn't need negative margin */
+            z-index: 3;
+        }
+
+        /* Rest of the styles remain the same */
+        .detailed-view {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .researchers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .researcher-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .researcher-image {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .researcher-name {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 0.5rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .researcher-card:hover .researcher-name {
+            opacity: 1;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin: 1.5rem 0 1rem;
+        }
+
+        .description {
+            margin: 1rem 0;
+            color: #4a5568;
+        }
+
+        .publications-list {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .publication-item {
+            border-left: 4px solid #4299e1;
+            padding: 0.75rem 1rem;
+            margin-bottom: 0.75rem;
+            background: #f8f9fa;
+            transition: background-color 0.3s ease;
+        }
+
+        .publication-item:hover {
+            background: #edf2f7;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            background: #4299e1;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            margin-top: 1.5rem;
+            transition: background-color 0.3s ease;
+            font-size: 0.875rem;
+            font-weight: 500;
+            gap: 0.5rem;
+        }
+
+        .back-button:hover {
+            background: #3182ce;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Preview Card -->
+    <div class="preview-card" id="preview-card">
+        <div class="card-header">
+            <h2 class="title">Music Audio Generation</h2>
+            <div class="researcher-previews">
+                <img src="/assets/images/people/zachary_novack.jpeg" alt="Researcher 1" class="researcher-preview">
+                <img src="/assets/images/people/ke_chen.jpeg" alt="Researcher 2" class="researcher-preview">
+                <img src="/assets/images/people/Tornike_Karchkhadze.png" alt="Researcher 3" class="researcher-preview">
+            </div>
+        </div>
     </div>
-  </div>
-  {% else %} {% include empty.html %} {% endfor %}
+
+    <!-- Detailed View -->
+    <div class="detailed-view hidden" id="detailed-view">
+        <h1 class="title">Music Audio Generation</h1>
+        
+        <div class="researchers-grid">
+            <div class="researcher-card">
+                <img src="/assets/images/people/zachary_novack.jpeg" alt="Researcher 1" class="researcher-image">
+                <div class="researcher-name">Zachary Novack</div>
+            </div>
+            <div class="researcher-card">
+                <img src="/assets/images/people/ke_chen.jpeg" alt="Researcher 2" class="researcher-image">
+                <div class="researcher-name">Ke Chen</div>
+            </div>
+            <div class="researcher-card">
+              <img src="/assets/images/people/Tornike_Karchkhadze.png" alt="Researcher 3" class="researcher-image">
+              <div class="researcher-name">Tornike Karchkhadze</div>
+          </div>
+        </div>
+
+        
+        <p class="description">
+            Some paragraphs
+        </p>
+
+        <h2 class="section-title">Publications</h2>
+        <ul class="publications-list">
+            <li class="publication-item">
+              Zachary Novack, Ge Zhu, Jonah Casebeer, Julian McAuley, Taylor Berg-Kirkpatrick, Nicholas J Bryan. 2024. "Presto! Distilling Steps and Layers for Accelerating Music Generation" arXiv:2410.05167
+            </li>
+
+        </ul>
+
+        <button class="back-button" id="back-button">Show Less ↑</button>
+    </div>
 </div>
+
+    <div class="container">
+        <!-- Preview Card -->
+        <div class="preview-card" id="preview-card">
+            <div class="card-header">
+                <h2 class="title">Sound Synthesis</h2>
+                <div class="researcher-previews">
+                    <img src="/assets/images/people/Tornike_Karchkhadze.png" alt="Researcher 1" class="researcher-preview">
+                    <img src="/assets/images/people/haowen_dong.jpg" alt="Researcher 2" class="researcher-preview">
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed View -->
+        <div class="detailed-view hidden" id="detailed-view">
+            <h1 class="title">Sound Synthesis</h1>
+            
+            <div class="researchers-grid">
+                <div class="researcher-card">
+                    <img src="/assets/images/people/Tornike_Karchkhadze.png" alt="Researcher 1" class="researcher-image">
+                    <div class="researcher-name">Tornike Karchkhadze</div>
+                </div>
+                <div class="researcher-card">
+                    <img src="/assets/images/people/haowen_dong.jpg" alt="Researcher 2" class="researcher-image">
+                    <div class="researcher-name">Hao-Wen Dong</div>
+                </div>
+            </div>
+
+            
+            <p class="description">
+                Our research has explored the field of sound synthesis through innovative machine learning approaches. We have explored various methodologies for synthesizing high-quality audio content, ranging from pioneering work with Generative Adversarial Networks (GANs) for raw-waveform audio synthesis to developing sophisticated text-to-sound synthesis systems.
+            </p>
+
+            <h2 class="section-title">Publications</h2>
+            <ul class="publications-list">
+                <li class="publication-item">
+                    Tornike Karchkhadze, Hassan Salami Kavaki, Mohammad Rasool Izadi, Bryce Irvin, Mikolaj Kegler, Ari Hertz, Shuo Zhang, Marko Stamenovic. 2024. "Latent CLAP Loss for Better Foley Sound Synthesis" Europian Association for Signal Processing (EUSIPCO)
+                </li>
+                <li class="publication-item">
+                    Hao-Wen Dong, Xiaoyu Liu, Jordi Pons, Gautam Bhattacharya, Santiago Pascual, Joan Serrà, Taylor Berg-Kirkpatrick, and Julian McAuley. 2023. "CLIPSonic: Text-to-audio synthesis with unlabeled videos and pretrained language-vision models" IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)
+                </li>
+                <li class="publication-item">
+                    Chris Donahue, Julian McAuley, and Miller Puckette. 2019. "Adversarial Audio Synthesis" International Conference on Learning Representations (ICLR)
+                </li>
+            </ul>
+
+            <button class="back-button" id="back-button">Show Less ↑</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('preview-card').addEventListener('click', function() {
+            document.getElementById('preview-card').classList.add('hidden');
+            document.getElementById('detailed-view').classList.remove('hidden');
+        });
+
+        document.getElementById('back-button').addEventListener('click', function() {
+            document.getElementById('detailed-view').classList.add('hidden');
+            document.getElementById('preview-card').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
