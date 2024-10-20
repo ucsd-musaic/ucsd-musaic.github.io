@@ -12,13 +12,19 @@ order: 3
     <!-- Previous head content remains the same -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research Areas</title>
     <style>
         /* Previous styles remain the same */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        .intro p {
+            font-size: 1.2rem;
+            color: #333;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            padding: 1.5em;
         }
 
         body {
@@ -40,8 +46,8 @@ order: 3
             margin-bottom: 2rem;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 2px 4px rgba(0,24,64,0.1),
-                       0 0 1px rgba(0,24,64,0.2);
+            box-shadow: 0 4px 8px rgba(0,24,64,0.1),
+                       0 0 2px rgba(0,24,64,0.2);
         }
 
         .preview-card:hover {
@@ -208,206 +214,184 @@ order: 3
 </head>
 
   <body>
+    
+    <div class="intro">
+      <p>We are primarily interested in investigating how we can build better systems for music <b>generation</b> and <b>understanding</b>.</p>
+     </div>
+
     <div class="container">
-      <!-- Preview Card 1 -->
+         <!-- Preview Card 1 -->
       <div class="preview-card" id="preview-card-1">
-          <div class="card-header">
-              <h2 class="title">Music Audio Generation and Synthesis</h2>
-              <div class="researcher-previews">
-                  <img src="/assets/images/people/zachary_novack.jpeg" alt="Researcher 1" class="researcher-preview">
-                  <img src="/assets/images/people/ke_chen.jpeg" alt="Researcher 2" class="researcher-preview">
-                  <img src="/assets/images/people/Tornike_Karchkhadze.png" alt="Researcher 3" class="researcher-preview">
-              </div>
+        <div class="card-header">
+            <h2 class="title">Music Audio Generation and Synthesis</h2>
+            <div class="researcher-previews">
+                <img src="/assets/images/people/zachary_novack.jpeg" alt="Researcher 1" class="researcher-preview">
+                <img src="/assets/images/people/Tornike_Karchkhadze.png" alt="Researcher 2" class="researcher-preview">
+                <img src="/assets/images/people/ke_chen.jpeg" alt="Researcher 3" class="researcher-preview">
+                <img src="/assets/images/people/haowen_dong.jpg" alt="Researcher 4" class="researcher-preview">
+            
+            </div>
+        </div>
+    </div>
+
+    <!-- Detailed View 1 -->
+    <div class="detailed-view hidden" id="detailed-view-1">
+        <h1 class="title">Music Audio Generation and Synthesis</h1>
+        
+        <div class="researchers-grid">
+            <div class="researcher-card">
+                <img src="/assets/images/people/zachary_novack.jpeg" alt="Researcher 1" class="researcher-image">
+                <div class="researcher-name">Zachary Novack</div>
+            </div>
+            <div class="researcher-card">
+              <img src="/assets/images/people/Tornike_Karchkhadze.png" alt="Researcher 2" class="researcher-image">
+              <div class="researcher-name">Tornike Karchkhadze</div>
           </div>
-      </div>
-  
-      <!-- Detailed View 1 -->
-      <div class="detailed-view hidden" id="detailed-view-1">
-          <h1 class="title">Music Audio Generation and Synthesis</h1>
-          
-          <div class="researchers-grid">
-              <div class="researcher-card">
-                  <img src="/assets/images/people/zachary_novack.jpeg" alt="Researcher 1" class="researcher-image">
-                  <div class="researcher-name">Zachary Novack</div>
-              </div>
-              <div class="researcher-card">
-                  <img src="/assets/images/people/ke_chen.jpeg" alt="Researcher 2" class="researcher-image">
-                  <div class="researcher-name">Ke Chen</div>
-              </div>
-              <div class="researcher-card">
-                <img src="/assets/images/people/Tornike_Karchkhadze.png" alt="Researcher 3" class="researcher-image">
-                <div class="researcher-name">Tornike Karchkhadze</div>
+            <div class="researcher-card">
+                <img src="/assets/images/people/ke_chen.jpeg" alt="Researcher 3" class="researcher-image">
+                <div class="researcher-name">Ke Chen</div>
+            </div>
+            <div class="researcher-card">
+              <img src="/assets/images/people/haowen_dong.jpg" alt="Researcher 4" class="researcher-image">
+              <div class="researcher-name">Hao-Wen (Herman) Dong</div>
             </div>
           </div>
-  
-          <p class="description">Some paragraphs</p>
-  
-          <h2 class="section-title">Publications</h2>
-          <ul class="publications-list">
-              <li class="publication-item">
-                Zachary Novack, Ge Zhu, Jonah Casebeer, Julian McAuley, Taylor Berg-Kirkpatrick, Nicholas J Bryan. 2024. "Presto! Distilling Steps and Layers for Accelerating Music Generation" arXiv:2410.05167
-              </li>
-          </ul>
-  
-          <button class="back-button" id="back-button-1">Show Less ↑</button>
+            
+
+        
+        <p class="description">Some paragraphs</p>
+
+        <h2 class="section-title">Publications</h2>
+        <ul class="publications-list">
+            <li class="publication-item">
+              Zachary Novack, Ge Zhu, Jonah Casebeer, Julian McAuley, Taylor Berg-Kirkpatrick, Nicholas J Bryan. 2024. "Presto! Distilling Steps and Layers for Accelerating Music Generation" arXiv:2410.05167
+            </li>
+        </ul>
+
+        <button class="back-button" id="back-button-1">Show Less ↑</button>
+
+  </div>
+        <!-- Preview Card 2 -->
+        <div class="preview-card" id="preview-card-3">
+          <div class="card-header">
+              <h2 class="title">Symbolic Music Processing</h2>
+              <div class="researcher-previews">
+                  <img src="/assets/images/people/jingyue_huang.jpeg" alt="Researcher 1" class="researcher-preview">
+                  <img src="/assets/images/people/phillip_long.jpg" alt="Researcher 1" class="researcher-preview">
+                  
+                  <img src="/assets/images/people/haowen_dong.jpg" alt="Researcher 2" class="researcher-preview">
+                  <img src="/assets/images/people/ke_chen.jpeg" alt="Researcher 3" class="researcher-preview">
+             
+              </div>
+          </div>
       </div>
   
+
+
+      <div class="detailed-view hidden" id="detailed-view-2">
+        <h1 class="title">Audiovisual Processing</h1>
+        
+        <div class="researchers-grid">
+            <div class="researcher-card">
+                <img src="/assets/images/people/Tornike_Karchkhadze.png" alt="Researcher 1" class="researcher-image">
+                <div class="researcher-name">Tornike Karchkhadze</div>
+            </div>
+            <div class="researcher-card">
+                <img src="/assets/images/people/haowen_dong.jpg" alt="Researcher 2" class="researcher-image">
+                <div class="researcher-name">Hao-Wen Dong</div>
+            </div>
+        </div>
+
+        <p class="description">
+            Our research has explored the field of sound synthesis through innovative machine learning approaches. We have explored various methodologies for synthesizing high-quality audio content, ranging from pioneering work with Generative Adversarial Networks (GANs) for raw-waveform audio synthesis to developing sophisticated text-to-sound synthesis systems.
+        </p>
+
+        <h2 class="section-title">Publications</h2>
+        <ul class="publications-list">
+            <li class="publication-item">
+                Tornike Karchkhadze, Hassan Salami Kavaki, Mohammad Rasool Izadi, Bryce Irvin, Mikolaj Kegler, Ari Hertz, Shuo Zhang, Marko Stamenovic. 2024. "Latent CLAP Loss for Better Foley Sound Synthesis" Europian Association for Signal Processing (EUSIPCO)
+            </li>
+            <li class="publication-item">
+                Hao-Wen Dong, Xiaoyu Liu, Jordi Pons, Gautam Bhattacharya, Santiago Pascual, Joan Serrà, Taylor Berg-Kirkpatrick, and Julian McAuley. 2023. "CLIPSonic: Text-to-audio synthesis with unlabeled videos and pretrained language-vision models" IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)
+                </li>
+            <li class="publication-item">
+                Chris Donahue, Julian McAuley, and Miller Puckette. 2019. "Adversarial Audio Synthesis" International Conference on Learning Representations (ICLR)
+            </li>
+        </ul>
+
+        <button class="back-button" id="back-button-2">Show Less ↑</button>
+    </div>
+
+
+     
       <!-- Preview Card 2 -->
       <div class="preview-card" id="preview-card-2">
           <div class="card-header">
-              <h2 class="title">Multimodal Music Processing</h2>
+              <h2 class="title">Music and Language Processing</h2>
               <div class="researcher-previews">
-                  <img src="/assets/images/people/Tornike_Karchkhadze.png" alt="Researcher 1" class="researcher-preview">
-                  <img src="/assets/images/people/haowen_dong.jpg" alt="Researcher 2" class="researcher-preview">
+
+              <img src="/assets/images/people/junda_wu.jpeg" alt="Researcher 1" class="researcher-preview">
+              <img src="/assets/images/people/xin_xu.jpeg" alt="Researcher 3" class="researcher-preview">
+              <img src="/assets/images/people/haven_kim.png" alt="Researcher 2" class="researcher-preview">
               </div>
           </div>
       </div>
-  
-      <!-- Detailed View 2 -->
-      <div class="detailed-view hidden" id="detailed-view-2">
-          <h1 class="title">Multimodal Music Processing</h1>
-          
-          <div class="researchers-grid">
-              <div class="researcher-card">
-                  <img src="/assets/images/people/Tornike_Karchkhadze.png" alt="Researcher 1" class="researcher-image">
-                  <div class="researcher-name">Tornike Karchkhadze</div>
-              </div>
-              <div class="researcher-card">
-                  <img src="/assets/images/people/haowen_dong.jpg" alt="Researcher 2" class="researcher-image">
-                  <div class="researcher-name">Hao-Wen Dong</div>
-              </div>
-          </div>
-  
-          <p class="description">
-              Our research has explored the field of sound synthesis through innovative machine learning approaches. We have explored various methodologies for synthesizing high-quality audio content, ranging from pioneering work with Generative Adversarial Networks (GANs) for raw-waveform audio synthesis to developing sophisticated text-to-sound synthesis systems.
-          </p>
-  
-          <h2 class="section-title">Publications</h2>
-          <ul class="publications-list">
-              <li class="publication-item">
-                  Tornike Karchkhadze, Hassan Salami Kavaki, Mohammad Rasool Izadi, Bryce Irvin, Mikolaj Kegler, Ari Hertz, Shuo Zhang, Marko Stamenovic. 2024. "Latent CLAP Loss for Better Foley Sound Synthesis" Europian Association for Signal Processing (EUSIPCO)
-              </li>
-              <li class="publication-item">
-                  Hao-Wen Dong, Xiaoyu Liu, Jordi Pons, Gautam Bhattacharya, Santiago Pascual, Joan Serrà, Taylor Berg-Kirkpatrick, and Julian McAuley. 2023. "CLIPSonic: Text-to-audio synthesis with unlabeled videos and pretrained language-vision models" IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)
-                  </li>
-              <li class="publication-item">
-                  Chris Donahue, Julian McAuley, and Miller Puckette. 2019. "Adversarial Audio Synthesis" International Conference on Learning Representations (ICLR)
-              </li>
-          </ul>
-  
-          <button class="back-button" id="back-button-2">Show Less ↑</button>
-      </div>
-    </div>
-  
-          <!-- Preview Card 2 -->
-          <div class="preview-card" id="preview-card-2">
-            <div class="card-header">
-                <h2 class="title">Symbolic Music Processing</h2>
-                <div class="researcher-previews">
-                    <img src="/assets/images/people/Tornike_Karchkhadze.png" alt="Researcher 1" class="researcher-preview">
-                    <img src="/assets/images/people/haowen_dong.jpg" alt="Researcher 2" class="researcher-preview">
-                </div>
-            </div>
-        </div>
-    
-        <!-- Detailed View 2 -->
-        <div class="detailed-view hidden" id="detailed-view-3">
-            <h1 class="title">Symbolic Music Processing</h1>
-            
-            <div class="researchers-grid">
-                <div class="researcher-card">
-                    <img src="/assets/images/people/Tornike_Karchkhadze.png" alt="Researcher 1" class="researcher-image">
-                    <div class="researcher-name">Tornike Karchkhadze</div>
-                </div>
-                <div class="researcher-card">
-                    <img src="/assets/images/people/haowen_dong.jpg" alt="Researcher 2" class="researcher-image">
-                    <div class="researcher-name">Hao-Wen Dong</div>
-                </div>
-            </div>
-    
-            <p class="description">
-                Our research has explored the field of sound synthesis through innovative machine learning approaches. We have explored various methodologies for synthesizing high-quality audio content, ranging from pioneering work with Generative Adversarial Networks (GANs) for raw-waveform audio synthesis to developing sophisticated text-to-sound synthesis systems.
-            </p>
-    
-            <h2 class="section-title">Publications</h2>
-            <ul class="publications-list">
-                <li class="publication-item">
-                    Tornike Karchkhadze, Hassan Salami Kavaki, Mohammad Rasool Izadi, Bryce Irvin, Mikolaj Kegler, Ari Hertz, Shuo Zhang, Marko Stamenovic. 2024. "Latent CLAP Loss for Better Foley Sound Synthesis" Europian Association for Signal Processing (EUSIPCO)
-                </li>
-                <li class="publication-item">
-                    Hao-Wen Dong, Xiaoyu Liu, Jordi Pons, Gautam Bhattacharya, Santiago Pascual, Joan Serrà, Taylor Berg-Kirkpatrick, and Julian McAuley. 2023. "CLIPSonic: Text-to-audio synthesis with unlabeled videos and pretrained language-vision models" IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)
-                    </li>
-                <li class="publication-item">
-                    Chris Donahue, Julian McAuley, and Miller Puckette. 2019. "Adversarial Audio Synthesis" International Conference on Learning Representations (ICLR)
-                </li>
-            </ul>
-    
-            <button class="back-button" id="back-button-3">Show Less ↑</button>
-        </div>
-
-
-  
-    <!-- Preview Card 2 -->
-    <div class="preview-card" id="preview-card-4">
-      <div class="card-header">
-          <h2 class="title">Source Separation</h2>
-          <div class="researcher-previews">
-              <img src="/assets/images/people/Tornike_Karchkhadze.png" alt="Researcher 1" class="researcher-preview">
-              <img src="/assets/images/people/haowen_dong.jpg" alt="Researcher 2" class="researcher-preview">
-          </div>
-      </div>
-  </div>
-
-  <!-- Detailed View 2 -->
-  <div class="detailed-view hidden" id="detailed-view-4">
-      <h1 class="title">Source Separation</h1>
       
-      <div class="researchers-grid">
-          <div class="researcher-card">
-              <img src="/assets/images/people/Tornike_Karchkhadze.png" alt="Researcher 1" class="researcher-image">
-              <div class="researcher-name">Tornike Karchkhadze</div>
-          </div>
-          <div class="researcher-card">
-              <img src="/assets/images/people/haowen_dong.jpg" alt="Researcher 2" class="researcher-image">
-              <div class="researcher-name">Hao-Wen Dong</div>
-          </div>
-      </div>
-
-      <p class="description">
-          Our research has explored the field of sound synthesis through innovative machine learning approaches. We have explored various methodologies for synthesizing high-quality audio content, ranging from pioneering work with Generative Adversarial Networks (GANs) for raw-waveform audio synthesis to developing sophisticated text-to-sound synthesis systems.
-      </p>
-
-      <h2 class="section-title">Publications</h2>
-      <ul class="publications-list">
-          <li class="publication-item">
-              Tornike Karchkhadze, Hassan Salami Kavaki, Mohammad Rasool Izadi, Bryce Irvin, Mikolaj Kegler, Ari Hertz, Shuo Zhang, Marko Stamenovic. 2024. "Latent CLAP Loss for Better Foley Sound Synthesis" Europian Association for Signal Processing (EUSIPCO)
-          </li>
-          <li class="publication-item">
-              Hao-Wen Dong, Xiaoyu Liu, Jordi Pons, Gautam Bhattacharya, Santiago Pascual, Joan Serrà, Taylor Berg-Kirkpatrick, and Julian McAuley. 2023. "CLIPSonic: Text-to-audio synthesis with unlabeled videos and pretrained language-vision models" IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)
-              </li>
-          <li class="publication-item">
-              Chris Donahue, Julian McAuley, and Miller Puckette. 2019. "Adversarial Audio Synthesis" International Conference on Learning Representations (ICLR)
-          </li>
-      </ul>
-
-      <button class="back-button" id="back-button-4">Show Less ↑</button>
-  </div>
+      <!-- Detailed View 2 -->
 
 
-   <!-- Preview Card 2 -->
-   <div class="preview-card" id="preview-card-5">
+              <!-- Detailed View 2 -->
+        <div class="detailed-view hidden" id="detailed-view-3">
+                <h1 class="title">Symbolic Music Processing</h1>
+                
+                <div class="researchers-grid">
+                    <div class="researcher-card">
+                        <img src="/assets/images/people/Tornike_Karchkhadze.png" alt="Researcher 1" class="researcher-image">
+                        <div class="researcher-name">Tornike Karchkhadze</div>
+                    </div>
+                    <div class="researcher-card">
+                        <img src="/assets/images/people/haowen_dong.jpg" alt="Researcher 2" class="researcher-image">
+                        <div class="researcher-name">Hao-Wen Dong</div>
+                    </div>
+                </div>
+        
+                <p class="description">
+                    Our research has explored the field of sound synthesis through innovative machine learning approaches. We have explored various methodologies for synthesizing high-quality audio content, ranging from pioneering work with Generative Adversarial Networks (GANs) for raw-waveform audio synthesis to developing sophisticated text-to-sound synthesis systems.
+                </p>
+        
+                <h2 class="section-title">Publications</h2>
+                <ul class="publications-list">
+                    <li class="publication-item">
+                        Tornike Karchkhadze, Hassan Salami Kavaki, Mohammad Rasool Izadi, Bryce Irvin, Mikolaj Kegler, Ari Hertz, Shuo Zhang, Marko Stamenovic. 2024. "Latent CLAP Loss for Better Foley Sound Synthesis" Europian Association for Signal Processing (EUSIPCO)
+                    </li>
+                    <li class="publication-item">
+                        Hao-Wen Dong, Xiaoyu Liu, Jordi Pons, Gautam Bhattacharya, Santiago Pascual, Joan Serrà, Taylor Berg-Kirkpatrick, and Julian McAuley. 2023. "CLIPSonic: Text-to-audio synthesis with unlabeled videos and pretrained language-vision models" IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)
+                        </li>
+                    <li class="publication-item">
+                        Chris Donahue, Julian McAuley, and Miller Puckette. 2019. "Adversarial Audio Synthesis" International Conference on Learning Representations (ICLR)
+                    </li>
+                </ul>
+        
+                <button class="back-button" id="back-button-3">Show Less ↑</button>
+            </div>
+
+            
+  
+        
+
+
+  <div class="preview-card" id="preview-card-2">
     <div class="card-header">
-        <h2 class="title">Music Representation Learning</h2>
+        <h2 class="title">Audiovisual Learning</h2>
         <div class="researcher-previews">
-            <img src="/assets/images/people/Tornike_Karchkhadze.png" alt="Researcher 1" class="researcher-preview">
-            <img src="/assets/images/people/haowen_dong.jpg" alt="Researcher 2" class="researcher-preview">
+          <img src="/assets/images/people/haven_kim.png" alt="Researcher 1" class="researcher-preview">
+          <img src="/assets/images/people/ross_greer.jpg" alt="Researcher 2" class="researcher-preview">
+          
         </div>
     </div>
 </div>
-
-<!-- Detailed View 2 -->
-<div class="detailed-view hidden" id="detailed-view-5">
-    <h1 class="title">Music Representation Learning</h1>
+  <div class="detailed-view hidden" id="detailed-view-2">
+    <h1 class="title">Audio-visual Processing</h1>
     
     <div class="researchers-grid">
         <div class="researcher-card">
@@ -437,32 +421,31 @@ order: 3
         </li>
     </ul>
 
-    <button class="back-button" id="back-button-5">Show Less ↑</button>
+    <button class="back-button" id="back-button-2">Show Less ↑</button>
 </div>
 
 
+
    <!-- Preview Card 2 -->
-   <div class="preview-card" id="preview-card-6">
+   <div class="preview-card" id="preview-card-5">
     <div class="card-header">
         <h2 class="title">Others</h2>
         <div class="researcher-previews">
-            <img src="/assets/images/people/Tornike_Karchkhadze.png" alt="Researcher 1" class="researcher-preview">
-            <img src="/assets/images/people/haowen_dong.jpg" alt="Researcher 2" class="researcher-preview">
         </div>
     </div>
 </div>
 
 <!-- Detailed View 2 -->
-<div class="detailed-view hidden" id="detailed-view-6">
-    <h1 class="title">Others</h1>
+<div class="detailed-view hidden" id="detailed-view-5">
+    <h1 class="title">Music Dataset Construction</h1>
     
     <div class="researchers-grid">
         <div class="researcher-card">
-            <img src="/assets/images/people/Tornike_Karchkhadze.png" alt="Researcher 1" class="researcher-image">
+            <img src="/assets/images/people/phillip_long.jpg" alt="Researcher 1" class="researcher-image">
             <div class="researcher-name">Tornike Karchkhadze</div>
         </div>
         <div class="researcher-card">
-            <img src="/assets/images/people/haowen_dong.jpg" alt="Researcher 2" class="researcher-image">
+            <img src="/assets/images/people/haven_kim.png" alt="Researcher 2" class="researcher-image">
             <div class="researcher-name">Hao-Wen Dong</div>
         </div>
     </div>
