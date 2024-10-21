@@ -18,6 +18,12 @@ PhDs:
     image: Tornike_Karchkhadze.png
     website: https://www.linkedin.com/in/tornike-karchkhadze/
 
+  - name: Zachary Novack
+    title: PhD Student
+    description: Hi! I'm a 3rd year PhD student co-advised by Julian McAuley and Taylor Berg-Kirkpatrick. I'm broadly interested in all things controllable and efficient audio/music generation, and I'm a big proponent of open, ethical AIxMusic research. In my free time, I play volleyball and teach indoor drumline at POW Percussion Ensemble.
+    image: zachary_novack.jpg
+    website: https://zacharynovack.github.io/
+
   - name: Junda Wu
     title: PhD Student
     description: I am a second-year PhD student advised by Prof. Julian McAuley. My research spans NLP, multimodality, and music recommendation. I love classical music and opera, and I have a growing collection of CDs and vinyl.
@@ -54,6 +60,12 @@ Alumni:
     description: I am currently an assistant professor at the University of Michigan, working on human-centered generative AI for music, audio, and video creation.
     image: haowen_dong.jpg
     website: https://hermandong.com/
+
+  - name: Ke Chen
+    title: Research Scientist
+    description: I'm Ke Chen and currently the research scientist at Adobe Research. I have strong interests in audio representation learning, music generative model, music information retrieval, and audio source separation. I received a PhD in computer science and a master in music advised by Prof. Shlomo Dubnov and Prof. Taylor Berg-Kirkpatrick.
+    image: ke_chen.png
+    website: https://www.knutchen.com/
 
   - name: Ross Greer
     title: Assistant Professor
