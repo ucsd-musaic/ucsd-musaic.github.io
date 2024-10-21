@@ -133,9 +133,17 @@ visible: false
    <h1>
      Latest News 
     </h1>
+    {%- assign new_items = site.data.news.news | where: "is_new", true -%}
+    {%- if new_items.size > 0 -%}
     <h2>
-      <li>May 15 2024: Hao-Wen defends dissertation.</li>
+      {%- for item in new_items -%}
+      <ul>
+        <li>{{ item.date }}: {{ item.content }}</li>
+      </ul>
+      {%- endfor -%}
     </h2>
+    
+    {%- endif -%}
     <a href="{{ site.baseurl }}/news" class="hyde btn btn-light">Get More News</a>
   </div>
 </div>

@@ -92,14 +92,12 @@ order: 4
   <div class="news-section">
     <div class="news-container">
       <ul class="news-list">
-        <li class="news-item new">
-          <span class="news-date">May 22, 2024</span>
-          <span class="news-content">Ke defends dissertation.</span>
-        </li>
-        <li class="news-item new">
-          <span class="news-date">May 15, 2024</span>
-          <span class="news-content">Hao-Wen defends dissertation.</span>
-        </li>
+        {%- for item in site.data.news.news -%}
+          <li class="news-item {% if item.is_new %}new{% endif %}">
+            <span class="news-date">{{ item.date }}</span>
+            <span class="news-content">{{ item.content }}</span>
+          </li>
+        {%- endfor -%}
       </ul>
     </div>
   </div>
