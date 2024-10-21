@@ -7,4 +7,4 @@
 - ~~Tokens setup~~
 - Mobile Navigator (Amit)
 - ~~Work on Research Page~~
-- Work on Favicon
+- ~~Work on Favicon~~
