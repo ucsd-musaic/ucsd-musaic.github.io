@@ -102,6 +102,7 @@ order: 3
             transition: all 0.3s ease;
             box-shadow: 0 4px 8px rgba(0,24,64,0.1),
                        0 0 2px rgba(0,24,64,0.2);
+            position: relative;
         }
 
         .preview-card:hover {
@@ -113,7 +114,7 @@ order: 3
         .card-header {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0rem;
         }
 
         .title {
@@ -263,7 +264,48 @@ order: 3
 
         .hidden {
             display: none;
-        }
+
+                }
+        @media (max-width: 640px) {
+        .card-header {
+          display:flex;
+          width:100%;
+          flex-direction: column;
+        align-items: flex-start;
+        gap: 0rem;
+    }
+      .header-top {
+        
+        flex: 1;
+      min-width: 0; /* Prevents text overflow issues */
+      padding-right: 0;
+      width: 50%;
+    }
+
+      .header-bottom {
+        position:absolute;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        width: 50%;
+        justify-content: center;
+        transform: translateX(70%);
+
+      }
+
+      .title {
+        font-size: 1rem;
+        line-height: 1.4;
+        word-wrap: break-word;
+        hyphens: auto;
+      }
+
+      .researcher-previews {
+        justify-content: center;
+      }
+    }
+
+        
     </style>
 </head>
 
@@ -277,7 +319,8 @@ order: 3
          <!-- Preview Card 1 -->
       <div class="preview-card" id="preview-card-1">
         <div class="card-header">
-            <h2 class="title">Music Audio Generation and Synthesis</h2>
+            <div class="header-top"><h2 class="title">Music Audio Generation and Synthesis</h2></div>
+            <div class="header-bottom">
             <div class="researcher-previews">
                 <img src="/assets/images/people/zachary_novack.jpeg" alt="Researcher 1" class="researcher-preview">
                 <img src="/assets/images/people/Tornike_Karchkhadze.png" alt="Researcher 2" class="researcher-preview">
@@ -285,6 +328,7 @@ order: 3
                 <img src="/assets/images/people/haowen_dong.jpg" alt="Researcher 4" class="researcher-preview">
             
             </div>
+          </div>
         </div>
     </div>
 
@@ -345,7 +389,10 @@ order: 3
         <!-- Preview Card 2 -->
         <div class="preview-card" id="preview-card-2">
           <div class="card-header">
+            <div class="header-top">
               <h2 class="title">Symbolic Music Processing</h2>
+            </div>
+            <div class="header-bottom">
               <div class="researcher-previews">
                   <img src="/assets/images/people/jingyue_huang.jpeg" alt="Researcher 1" class="researcher-preview">
                   <img src="/assets/images/people/phillip_long.jpg" alt="Researcher 1" class="researcher-preview">
@@ -354,6 +401,7 @@ order: 3
                   <img src="/assets/images/people/ke_chen.jpeg" alt="Researcher 3" class="researcher-preview">
              
               </div>
+            </div>
           </div>
       </div>
   
@@ -408,12 +456,15 @@ order: 3
       <!-- Preview Card 2 -->
       <div class="preview-card" id="preview-card-3">
           <div class="card-header">
-              <h2 class="title">Natural Language Processing for Music</h2>
+            <div class="header-top">
+              <h2 class="title">Natural Language Processing for Music</h2></div>
+              <div class="header-bottom">
               <div class="researcher-previews">
 
               <img src="/assets/images/people/junda_wu.jpeg" alt="Researcher 1" class="researcher-preview">
               <img src="/assets/images/people/xin_xu.jpeg" alt="Researcher 3" class="researcher-preview">
               </div>
+            </div>
           </div>
       </div>
       
@@ -463,11 +514,13 @@ order: 3
 
   <div class="preview-card" id="preview-card-4">
     <div class="card-header">
-        <h2 class="title">Audiovisual Learning</h2>
+      <div class="header-top">
+        <h2 class="title">Audiovisual Learning</h2></div>
+        <div class="header-bottom">
         <div class="researcher-previews">
           <img src="/assets/images/people/haven_kim.png" alt="Researcher 1" class="researcher-preview">
           <img src="/assets/images/people/ross_greer.jpg" alt="Researcher 2" class="researcher-preview">
-          
+        </div>
         </div>
     </div>
 </div>
