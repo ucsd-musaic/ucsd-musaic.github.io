@@ -43,3 +43,13 @@
   <script src="{{ site.baseurl }}/assets/js/hyde.js"></script>
   <title>{% unless page.url == "/" %}{% if page.layout == "tag" %}#{% endif %}{{ page.title }} | {% endunless %} {{ site.title }}</title>
 </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NCCC92Y19D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NCCC92Y19D');
+</script>
