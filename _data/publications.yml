@@ -132,11 +132,20 @@
     conference: "International Conference on Acoustics, Speech and Signal Processing (ICASSP) 2022"
     pdf_link: "YOUR_PDF_URL_HERE"
 
+2021:
+  - title: "An empirical evaluation of end-to-end polyphonic optical music recognition"
+    authors: "Sachinda Edirisooriya, Hao-Wen Dong, Julian McAuley, Taylor Berg-Kirkpatrick"
+    conference: "International Society for Music Information Retrieval (ISMIR) 2021"
+    pdf_link: "YOUR_PDF_URL_HERE"
+  - title: "Towards automatic instrumentation by learning to separate parts in symbolic multitrack music"
+    authors: "Hao-Wen Dong, Chris Donahue, Taylor Berg-Kirkpatrick, Julian McAuley"
+    conference: "International Society for Music Information Retrieval (ISMIR) 2021"
+    pdf_link: "YOUR_PDF_URL_HERE"
 
 2020:
   - title: "Discovering music relations with sequential attention"
     authors: "Junyan Jiang, Gus Xia, Taylor Berg-Kirkpatrick"
-    conference: "Proceedings of the 1st Workshop on NLP for Music and Audio (MLP4MusA)"
+    conference: "Proceedings of the 1st Workshop on NLP for Music and Audio (MLP4MusA) 2020"
     pdf_link: "YOUR_PDF_URL_HERE"
   - title: "Muspy: A toolkit for symbolic music generation"
     authors: "Hao-Wen Dong, Ke Chen, Julian McAuley, Taylor Berg-Kirkpatrick"
@@ -151,15 +160,6 @@
     conference: "International Conference on Semantic Computing (ICSC) 2020"
     pdf_link: "YOUR_PDF_URL_HERE"
 
-2021:
-  - title: "An empirical evaluation of end-to-end polyphonic optical music recognition"
-    authors: "Sachinda Edirisooriya, Hao-Wen Dong, Julian McAuley, Taylor Berg-Kirkpatrick"
-    conference: "International Society for Music Information Retrieval (ISMIR) 2021"
-    pdf_link: "YOUR_PDF_URL_HERE"
-  - title: "Towards automatic instrumentation by learning to separate parts in symbolic multitrack music"
-    authors: "Hao-Wen Dong, Chris Donahue, Taylor Berg-Kirkpatrick, Julian McAuley"
-    conference: "International Society for Music Information Retrieval (ISMIR) 2021"
-    pdf_link: "YOUR_PDF_URL_HERE"
 2019:
   - title: "LakhNES: Improving multi-instrumental music generation with cross-domain pre-training"
     authors: "Chris Donahue, Huanru Henry Mao, Yiting Ethan Li, Garrison W Cottrell, Julian McAuley"
@@ -169,16 +169,17 @@
     authors: "Ke Chen, Weilin Zhang, Shlomo Dubnov, Gus Xia, Wei Li"
     conference: "International Workshop on Multilayer Music Representation and Processing (MMRP) 2019"
     pdf_link: "YOUR_PDF_URL_HERE"
+  - title: "Adversarial audio synthesis"
+    authors: "Chris Donahue, Julian McAuley, Miller Puckette"
+    conference: "International Conference on Learning Representations (ICLR) 2019"
+    pdf_link: "YOUR_PDF_URL_HERE"
 
 2018:
   - title: "The NES music database: A multi-instrumental dataset with expressive performance attributes"
     authors: "Chris Donahue, Huanru Henry Mao, Julian McAuley"
     conference: "International Society for Music Information Retrieval (ISMIR) 2018"
     pdf_link: "YOUR_PDF_URL_HERE"
-  - title: "Adversarial audio synthesis"
-    authors: "Chris Donahue, Julian McAuley, Miller Puckette"
-    conference: "International Conference on Learning Representations (ICLR) 2019"
-    pdf_link: "YOUR_PDF_URL_HERE"
+
 
 2017:
   - title: "Dance dance convolution"
