@@ -1,7 +1,7 @@
 # TO-DO
 - ~~Debugging Header~~
 - ~~Deugging index page~~
-- 404
+- ~~404~~
 - ~~Checking the order of publications~~
 - URL to pubs
 - ~~Tokens setup~~
