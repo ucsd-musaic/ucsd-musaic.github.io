@@ -24,6 +24,12 @@ PhDs:
     image: zachary_novack.jpg
     website: https://zacharynovack.github.io/
 
+  - name: Ilana Shapiro
+    title: PhD Student
+    description: I am a second year PhD student in UCSD's Progsys Group, advised by Sorin Lerner. I also work closely with Taylor Berg-Kirkpatrick and Shlomo Dubnov. I'm currently interested in investigating how we can integrate the complimentary strengths of PL, AI, and HCI to develop human-interpretable structural constraints on generative models for the controllable generation of structurally coherent music. 
+    image: ilana_shapiro.png
+    website: https://www.linkedin.com/in/ilana-shapiro-157447170/
+
   - name: Junda Wu
     title: PhD Student
     description: I am a second-year PhD student advised by Prof. Julian McAuley. My research spans NLP, multimodality, and music recommendation. I love classical music and opera, and I have a growing collection of CDs and vinyl.
