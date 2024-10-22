@@ -61,17 +61,18 @@ PhDs:
     website: https://havenpersona.github.io/
 
 Alumni:
-  - name: Hao-Wen Dong
-    title: Assistant Professor
-    description: I am currently an assistant professor at the University of Michigan, working on human-centered generative AI for music, audio, and video creation.
-    image: haowen_dong.jpg
-    website: https://hermandong.com/
 
   - name: Ke Chen
     title: Research Scientist
     description: I'm Ke Chen and currently the research scientist at Adobe Research. I have strong interests in audio representation learning, music generative model, music information retrieval, and audio source separation. I received a PhD in computer science and a master in music advised by Prof. Shlomo Dubnov and Prof. Taylor Berg-Kirkpatrick.
     image: ke_chen.png
     website: https://www.knutchen.com/
+
+  - name: Hao-Wen Dong
+    title: Assistant Professor
+    description: I am currently an assistant professor at the University of Michigan, working on human-centered generative AI for music, audio, and video creation.
+    image: haowen_dong.jpg
+    website: https://hermandong.com/
 
   - name: Ross Greer
     title: Assistant Professor
