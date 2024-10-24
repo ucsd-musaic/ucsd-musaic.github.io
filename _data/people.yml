@@ -4,6 +4,11 @@ PIs:
     description: Julian McAuley is a Professor at UC San Diego, where he works on applications of machine learning to problems involving personalization, and teaches classes on personalized recommendation. He likes bicycling and baroque keyboard.
     image: julian_mcauley.jpg
     website: https://cseweb.ucsd.edu/~jmcauley/
+  - name: Shlomo Dubnov
+    title: Professor
+    description: Shlomo Dubnov is a Professor in Music and Computer Science Departments, mostly known for his work on Machine Improvisation and Music Information Dynamics. He occasionally composes music, mostly using AI, and likes the circus.
+    image: shlomo_dubnov.png
+    website: https://en.wikipedia.org/wiki/Shlomo_Dubnov
 
 PhDs:
   - name: Jingwei Liu
@@ -60,25 +65,12 @@ PhDs:
     image: haven_kim.png
     website: https://havenpersona.github.io/
 
-Alumni:
-
-  - name: Ke Chen
-    title: Research Scientist
-    description: I'm Ke Chen and currently the research scientist at Adobe Research. I have strong interests in audio representation learning, music generative model, music information retrieval, and audio source separation. I received a PhD in computer science and a master in music advised by Prof. Shlomo Dubnov and Prof. Taylor Berg-Kirkpatrick.
-    image: ke_chen.png
-    website: https://www.knutchen.com/
-
-  - name: Hao-Wen Dong
-    title: Assistant Professor
-    description: I am currently an assistant professor at the University of Michigan, working on human-centered generative AI for music, audio, and video creation.
-    image: haowen_dong.jpg
-    website: https://hermandong.com/
-
-  - name: Ross Greer
-    title: Assistant Professor
-    description: I'm an Assistant Professor in Computer Science & Engineering at UC Merced, with research interests in multimodal machine learning and human-robot interaction to improve machines' understanding of human intentions. Outside of research, I enjoy leading orchestra rehearsals and writing music.
-    image: ross_greer.jpg
-    website: https://www.rossgreer.com
+Masters:
+  - name: Daniel Zhao
+    title: Master's Student
+    description: I'm Daniel Zhao, a 1st year Master's student here at UCSD. I'm currently interning under Zachary Novack and my current project is on the acceleration of inference time of autoregressive music generation models. I'm generally interested in research within NLP, ML & systems, and multimodal ML! Some of my hobbies include golf, photography, and playing the cello.
+    image: daniel_zhao.png
+    website: https://astradzhao.github.io
 
 Undergraduates:
   - name: Amit Namburi
@@ -106,3 +98,23 @@ Affiliates:
     description: Hello! I’m Milan Gupta, a Junior at Francis Parker High School with a passion for generative AI and its applications in music and signal processing. In my free time, I enjoy producing EDM music and playing lacrosse.
     image: milan_gupta.png
     website: https://www.linkedin.com/in/milan-gupta-a131902b3/
+
+Alumni:
+
+  - name: Ke Chen
+    title: Research Scientist
+    description: I'm Ke Chen and currently the research scientist at Adobe Research. I have strong interests in audio representation learning, music generative model, music information retrieval, and audio source separation. I received a PhD in computer science and a master in music advised by Prof. Shlomo Dubnov and Prof. Taylor Berg-Kirkpatrick.
+    image: ke_chen.png
+    website: https://www.knutchen.com/
+
+  - name: Hao-Wen Dong
+    title: Assistant Professor
+    description: I am currently an assistant professor at the University of Michigan, working on human-centered generative AI for music, audio, and video creation.
+    image: haowen_dong.jpg
+    website: https://hermandong.com/
+
+  - name: Ross Greer
+    title: Assistant Professor
+    description: I'm an Assistant Professor in Computer Science & Engineering at UC Merced, with research interests in multimodal machine learning and human-robot interaction to improve machines' understanding of human intentions. Outside of research, I enjoy leading orchestra rehearsals and writing music.
+    image: ross_greer.jpg
+    website: https://www.rossgreer.com
