@@ -4,6 +4,13 @@ PIs:
     description: Julian McAuley is a Professor at UC San Diego, where he works on applications of machine learning to problems involving personalization, and teaches classes on personalized recommendation. He likes bicycling and baroque keyboard.
     image: julian_mcauley.jpg
     website: https://cseweb.ucsd.edu/~jmcauley/
+
+  - name: Taylor Berg-Kirkpatrick
+    title: Professor
+    description: I'm an associate professor in CSE. My lab works on natural language processing, music processing, and machine learning. 
+    image: taylor_berg.jpg
+    website: https://cseweb.ucsd.edu/~tberg/
+
   - name: Shlomo Dubnov
     title: Professor
     description: Shlomo Dubnov is a Professor in Music and Computer Science Departments, mostly known for his work on Machine Improvisation and Music Information Dynamics. He occasionally composes music, mostly using AI, and likes the circus.
