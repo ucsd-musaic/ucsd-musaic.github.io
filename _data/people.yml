@@ -125,3 +125,9 @@ Alumni:
     description: I'm an Assistant Professor in Computer Science & Engineering at UC Merced, with research interests in multimodal machine learning and human-robot interaction to improve machines' understanding of human intentions. Outside of research, I enjoy leading orchestra rehearsals and writing music.
     image: ross_greer.jpg
     website: https://www.rossgreer.com
+
+  - name: Chris Donahue
+    title: Dannenberg Assistant Professor
+    description: I am the Dannenberg Assistant Professor in the Computer Science Department at Carnegie Mellon University. I primarily work on empowering and enriching human musical creativity with generative AI. I received my PhD from the UCSD Department of Music in 2019 and was co-advised by Miller Puckette and Julian McAuley. I am proud to be the first PhD graduate associated with the UCSD MUSAIC program.
+    image: chris_donahue.jpg
+    website: https://chrisdonahue.com
