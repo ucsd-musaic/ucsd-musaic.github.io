@@ -1,12 +1,25 @@
+2025:
+  - title: "TeaserGen: Generating Teasers for Long Documentaries"
+    authors: "Weihan Xu, Paul Pu Liang, Haven Kim, Julian McAuley, Taylor Berg-Kirkpatrick, Hao-Wen Dong"
+    conference: "International Conference on Learning Representations (ICLR) 2025"
+    pdf_link: https://arxiv.org/pdf/2410.05586
+  - title: "Simultaneous Music Separation and Generation Using Multi-Track Latent Diffusion Models"
+    authors: "Tornike Karchkhadze, Mohammad Rasool Izadi, Shlomo Dubnov"
+    conference: "IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP 2025)"
+    pdf_link: https://arxiv.org/pdf/2409.12346
+  - title: "Improving Source Extraction with Diffusion and Consistency Models"
+    authors: "Tornike Karchkhadze, Mohammad Rasool Izadi, Shuo Zhang"
+    conference: "arxiv:2412.06965"
+    pdf_link: https://arxiv.org/pdf/2412.06965
 2024:
+  - title: "Interpreting Graphic Notation with MusicLDM: An AI Improvisation of Cornelius Cardew's Treatise"
+    authors: "Tornike Karchkhadze, Keren Shao, Shlomo Dubnov"
+    conference: "IEEE International Conference on Big Data (IEEE BigData 2024)"
+    pdf_link: https://arxiv.org/pdf/2412.08944
   - title: "Retrieval guided music captioning via multimodal prefixes"
     authors: "Nikita Srivatsan, Ke Chen, Shlomo Dubnov, Taylor Berg-Kirkpatrick"
     conference: "IJCAI 2024 (Special Track on AI, the Arts, and Creativity)"
     pdf_link: https://www.ijcai.org/proceedings/2024/0859.pdf
-  - title: "TeaserGen: Generating Teasers for Long Documentaries"
-    authors: "Weihan Xu, Paul Pu Liang, Haven Kim, Julian McAuley, Taylor Berg-Kirkpatrick, Hao-Wen Dong"
-    conference: "arXiv:2410.05586"
-    pdf_link: https://arxiv.org/pdf/2410.05586
   - title: "Presto! Distilling Steps and Layers for Accelerating Music Generation"
     authors: "Zachary Novack, Ge Zhu, Jonah Casebeer, Julian McAuley, Taylor Berg-Kirkpatrick, Nicholas J Bryan"
     conference: "arXiv:2410.05167"

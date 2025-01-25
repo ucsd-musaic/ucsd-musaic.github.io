@@ -1,4 +1,7 @@
 news:
+  - date: "Dec 5, 2024"
+    content: "Tornike Karchkhadze, Keren Shao, and Shlomo Dubnov, won an AI Music Piece Wins Award at the IEEE Big Data 2024 2nd Workshop on AI Music Generation (AIMG 2024)"
+    is_new: true
   - date: "Nov 27, 2024"
     content: "We've officially launched our Bluesky account. Follow us at @ucsd-musaic.bsky.social"
     is_new: true
@@ -7,7 +10,7 @@ news:
     is_new: true
   - date: "May 22, 2024"
     content: "Ke defends dissertation."
-    is_new: true
+    is_new: false
   - date: "May 15, 2024"
     content: "Hao-Wen defends dissertation."
-    is_new: true
+    is_new: false
