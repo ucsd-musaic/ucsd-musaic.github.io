@@ -7,6 +7,14 @@
     authors: "Weihan Xu, Paul Pu Liang, Haven Kim, Julian McAuley, Taylor Berg-Kirkpatrick, Hao-Wen Dong"
     conference: "International Conference on Learning Representations (ICLR), 2025"
     pdf_link: https://arxiv.org/pdf/2410.05586
+  - title: "PDMX: A Large-Scale Public Domain MusicXML Dataset for Symbolic Music Processing"
+    authors: "Phillip Long, Zachary Novack, Taylor Berg-Kirkpatrick, Julian McAuley"
+    conference: "IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP 2025)"
+    pdf_link: https://arxiv.org/pdf/2409.10831
+  - title: "CoLLAP: Contrastive Long-form Language-Audio Pretraining with Musical Temporal Structure Augmentation"
+    authors: "Junda Wu, Warren Li, Zachary Novack, Amit Namburi, Carol Chen, Julian McAuley"
+    conference: "IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP 2025)"
+    pdf_link: https://arxiv.org/pdf/2410.02271?
   - title: "Simultaneous Music Separation and Generation Using Multi-Track Latent Diffusion Models"
     authors: "Tornike Karchkhadze, Mohammad Rasool Izadi, Shlomo Dubnov"
     conference: "IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP 2025)"
@@ -24,18 +32,10 @@
     authors: "Nikita Srivatsan, Ke Chen, Shlomo Dubnov, Taylor Berg-Kirkpatrick"
     conference: "IJCAI 2024 (Special Track on AI, the Arts, and Creativity)"
     pdf_link: https://www.ijcai.org/proceedings/2024/0859.pdf
-  - title: "CoLLAP: Contrastive Long-form Language-Audio Pretraining with Musical Temporal Structure Augmentation"
-    authors: "Junda Wu, Warren Li, Zachary Novack, Amit Namburi, Carol Chen, Julian McAuley"
-    conference: "arXiv:2410.02271"
-    pdf_link: https://arxiv.org/pdf/2410.02271?
   - title: "Generating Symbolic Music from Natural Language Prompts using an LLM-Enhanced Dataset"
     authors: "Weihan Xu, Julian McAuley, Taylor Berg-Kirkpatrick, Shlomo Dubnov, Hao-Wen Dong"
     conference: "arXiv:2410.02084"
     pdf_link: https://arxiv.org/pdf/2410.02084
-  - title: "PDMX: A Large-Scale Public Domain MusicXML Dataset for Symbolic Music Processing"
-    authors: "Phillip Long, Zachary Novack, Taylor Berg-Kirkpatrick, Julian McAuley"
-    conference: "arXiv:2409.10831"
-    pdf_link: https://arxiv.org/pdf/2409.10831
   - title: "Creativity and Visual Communication from Machine to Musician: Sharing a Score through a Robotic Camera"
     authors: "Ross Greer, Laura Fleig, Shlomo Dubnov"
     conference: "arXiv:2409.05773"
