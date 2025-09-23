@@ -19,6 +19,18 @@
     authors: "Yongyi Zang, Sean O'Brien, Taylor Berg-Kirkpatrick, Julian McAuley, Zachary Novack"
     conference: "International Society for Music Information Retrieval (ISMIR) 2025"
     pdf_link: https://arxiv.org/pdf/2504.00369
+  - title: "Fast Text-to-Audio Generation with Adversarial Post-Training"
+    authors: "Zachary Novack, Zach Evans, Zack Zukowski, Josiah Taylor, CJ Carr, Julian Parker, Adnan Al-Sinan, Gian Marco Iodice, Julian McAuley, Taylor Berg-Kirkpatrick, Jordi Pons"
+    conference: "arXiv:2505.08175"
+    pdf_link: https://arxiv.org/pdf/2505.08175
+  - title: "WildFX: A DAW-Powered Pipeline for In-the-Wild Audio FX Graph Modeling"
+    authors: "Qihui Yang, Taylor Berg-Kirkpatrick, Julian McAuley, Zachary Novack"
+    conference: "ICML Workshop on Machine Learning for Audio, 2025"
+    pdf_link: https://arxiv.org/pdf/2507.10534
+  - title: "Synthesizing Composite Hierarchical Structure from Symbolic Music Corpora"
+    authors: "Ilana Shapiro, Ruanqianqian Huang, Zachary Novack, Cheng-i Wang, Hao-Wen Dong, Taylor Berg-Kirkpatrick, Shlomo Dubnov, Sorin Lerner"
+    conference: "International Joint Conference on Artificial Intelligence (IJCAI), 2025"
+    pdf_link: https://arxiv.org/pdf/2502.15849
   - title: "Presto! Distilling Steps and Layers for Accelerating Music Generation"
     authors: "Zachary Novack, Ge Zhu, Jonah Casebeer, Julian McAuley, Taylor Berg-Kirkpatrick, Nicholas J Bryan"
     conference: "International Conference of Learning Representations (ICLR), 2025"
@@ -27,6 +39,10 @@
     authors: "Weihan Xu, Paul Pu Liang, Haven Kim, Julian McAuley, Taylor Berg-Kirkpatrick, Hao-Wen Dong"
     conference: "International Conference on Learning Representations (ICLR), 2025"
     pdf_link: https://arxiv.org/pdf/2410.05586
+  - title: "kNN-SVC: Robust Zero-Shot Singing Voice Conversion with Additive Synthesis and Concatenation Smoothness Optimization"
+    authors: "Keren Shao, Ke Chen, Matthew Baas, Shlomo Dubnov"
+    conference: "IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP 2025)"
+    pdf_link: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10888953
   - title: "PDMX: A Large-Scale Public Domain MusicXML Dataset for Symbolic Music Processing"
     authors: "Phillip Long, Zachary Novack, Taylor Berg-Kirkpatrick, Julian McAuley"
     conference: "IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP 2025)"
