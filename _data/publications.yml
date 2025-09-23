@@ -1,4 +1,24 @@
 2025:
+  - title: "WildScore: Benchmarking MLLMs in-the-wild symbolic music reasoning"
+    authors: "Gagan Mundada, Yash Vishe, Amit Namburi, Xin Xu, Zachary Novack, Julian McAuley, Junda Wu"
+    conference: "The Conference on Empirical Methods in Natural Language Processing (EMNLP) 2025"
+    pdf_link: https://arxiv.org/pdf/2509.04744
+  - title: "Open Screen Soundtrack Library Version 2"
+    authors: "Haven Kim, Leduo Chen, Bill Wang, Hao-Wen Dong, Julian McAuley"
+    conference: "ISMIR LBD 2025"
+    pdf_link: https://ismir2025program.ismir.net/lbd_448.html
+  - title: "Video-guided text-to-music generation using public domain movie collections"
+    authors: "Haven Kim, Zachary Novack, Weihan Xu, Julian McAuley, Hao-Wen Dong"
+    conference: "International Society for Music Information Retrieval (ISMIR) 2025"
+    pdf_link: https://arxiv.org/pdf/2506.12573
+  - title: "Generating symbolic music from natural language prompts using an LLM-enhanced dataset"
+    authors: "Weihan Xu, Julian McAuley, Taylor Berg-Kirkpatrick, Shlomo Dubnov, Hao-Wen Dong"
+    conference: "International Society for Music Information Retrieval (ISMIR) 2025"
+    pdf_link: https://arxiv.org/pdf/2410.02084
+  - title: "Are you really listening? Boosting perceptual awareness in music-QA benchmarks"
+    authors: "Yongyi Zang, Sean O'Brien, Taylor Berg-Kirkpatrick, Julian McAuley, Zachary Novack"
+    conference: "International Society for Music Information Retrieval (ISMIR) 2025"
+    pdf_link: https://arxiv.org/pdf/2504.00369
   - title: "Presto! Distilling Steps and Layers for Accelerating Music Generation"
     authors: "Zachary Novack, Ge Zhu, Jonah Casebeer, Julian McAuley, Taylor Berg-Kirkpatrick, Nicholas J Bryan"
     conference: "International Conference of Learning Representations (ICLR), 2025"
