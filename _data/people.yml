@@ -62,7 +62,7 @@ PhDs:
 
   - name: Jingyue Huang
     title: PhD Student
-    description: I am a first-year PhD student in Computer Science at UC San Diego, advised by Prof. Julian McAuley. My research focuses on Controllable Music Generation and Music Understanding. I love playing guitar and traveling to explore beautiful nature spots.
+    description: I am a PhD student in Computer Science at UC San Diego, advised by Prof. Julian McAuley. My research focuses on Controllable Music Generation and Music Understanding. I love playing guitar and traveling to explore beautiful nature spots.
     image: jingyue_huang.jpeg
     website: https://yuer867.github.io/
 
@@ -78,11 +78,19 @@ Masters:
     description: I'm Daniel Zhao, a 1st year Master's student here at UCSD. I'm currently interning under Zachary Novack and my current project is on the acceleration of inference time of autoregressive music generation models. I'm generally interested in research within NLP, ML & systems, and multimodal ML! Some of my hobbies include golf, photography, and playing the cello.
     image: daniel_zhao.png
     website: https://astradzhao.github.io
+    
   - name: Qihui Yang
     title: Master's Student
     description: Hi there! I am currently a first-year master student here at UCSD. My research interests lie in Music Generation with Fine-Grained Artistic Control and Machine Learning Theories. My goal is to integrate cutting-edge technology into the music production workflow, empowering musicians to craft their unique sound for today’s era. I'm currently working on audio style transfer and causal structure analysis of motives in music creation.
     image: qihui_yang.JPG
     website: https://isaacyqh.github.io/
+    
+  - name: Xunyi Jiang
+    title: Master's Student
+    description: Hi! I’m Xunyi Jiang, a second-year master’s student at UCSD, working closely with Xin Xu. My current research focuses on fine-grained control of symbolic music models and synthesizer-parameter prediction. Broadly, I’m interested in LLMs, mechanistic interpretability, and multimodal approaches to music. Outside of research, I play piano and cello and love attending concerts. Looking forward to collaborating on exciting projects together!
+    image: xunyi_jiang.png
+    website: https://jiangxunyi.github.io/
+
 Undergraduates:
   - name: Amit Namburi
     title: Undergraduate Researcher
@@ -95,7 +103,6 @@ Undergraduates:
     description: Hi! My name is Phillip Long. I’m a second-year undergraduate student in the McAuley Lab mentored by Zachary Novack. I am interested in symbolic music generation and data-centric approaches to music processing. In my free time, I play the trumpet and piano, which sparked my interest in AI-Music.
     image: phillip_long.jpg
     website: https://pnlong.github.io/portfolio/
-
 
 Affiliates:
   - name: Matthew Rice
@@ -111,7 +118,6 @@ Affiliates:
     website: https://www.linkedin.com/in/milan-gupta-a131902b3/
 
 Alumni:
-
   - name: Ke Chen
     title: Research Scientist
     description: I'm Ke Chen and currently the research scientist at Adobe Research. I have strong interests in audio representation learning, music generative model, music information retrieval, and audio source separation. I received a PhD in computer science and a master in music advised by Prof. Shlomo Dubnov and Prof. Taylor Berg-Kirkpatrick.
