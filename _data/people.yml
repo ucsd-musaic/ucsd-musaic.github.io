@@ -66,12 +66,6 @@ PhDs:
     image: jingyue_huang.jpeg
     website: https://yuer867.github.io/
 
-  - name: Haven Kim
-    title: PhD Student
-    description: I'm a first-year PhD student working with Professor Julian McAuley, exploring the intersection of music and ML. 
-    image: haven_kim.jpg
-    website: https://havenpersona.github.io/
-
 Masters:
   - name: Daniel Zhao
     title: Master's Student
